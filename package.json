@@ -1,0 +1,41 @@
+{
+  "name": "minitab",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "npm run build-css && next build",
+    "build-css": "node-sass-chokidar components/ -o components/ --recursive",
+    "dev": "npm run local",
+    "local": "concurrently \"npm run watch-css\" \"next build && npm run pm2-local && npm run pm2-logs\"",
+    "prod": "npm run build && npm run pm2-prod && npm run pm2-logs",
+    "pm2-local": "pm2 start env.json --env local",
+    "pm2-prod": "pm2 start env.json --env production",
+    "pm2-logs": "pm2 flush && pm2 logs minitab",
+    "stop": "pm2 stop minitab",
+    "watch-css": "node-sass-chokidar components/ -o components/ --watch"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.6.3",
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "classnames": "^2.2.6",
+    "compression": "^1.7.4",
+    "concurrently": "^4.1.2",
+    "cors": "^2.8.5",
+    "es6-promise": "^4.2.8",
+    "express": "^4.17.1",
+    "isomorphic-unfetch": "^3.0.0",
+    "lodash": "^4.17.15",
+    "next": "^9.0.6",
+    "node-cache": "^5.1.0",
+    "node-sass": "^4.12.0",
+    "node-sass-chokidar": "^1.3.5",
+    "path": "^0.12.7",
+    "react": "16.10.0",
+    "react-dom": "16.10.1",
+    "react-promise": "^3.0.2",
+    "react-share": "^4.0.1",
+    "react-svg-loader": "^3.0.3",
+    "request-promise": "^4.2.5"
+  }
+}

@@ -1,0 +1,213 @@
+//QUERIES
+$xs: 360px;
+$sm: 480px;
+$md: 768px;
+$lg: 1016px;
+$xl: 1280px;
+//PRIMARY COLORS
+$color-primary-1: #E8272D;
+$color-primary-2: #EC5257;
+$color-primary-3: #F17D81;
+$color-primary-4: #F6A8AB;
+$color-primary-5: #FBD3D5;
+$color-primary-6: #FDE9E9;
+$color-primary-7: #FEF8F8;
+//EDITORIAL COLORS
+$color-editorial-1: #EF5713;
+$color-editorial-2: #1EB2BB;
+$color-editorial-3: #00A1ED;
+$color-editorial-4: #0084B5;
+$color-editorial-5: #96407D;
+$color-editorial-6: #E0007A;
+$color-editorial-7: #B50014;
+$color-editorial-8: #D2D2CA;
+$color-editorial-9: #E7E7E1;
+//GRAY COLORS
+$color-gray-1: #333333;
+$color-gray-2: #666666;
+$color-gray-3: #999999;
+$color-gray-4: #B5B5B5;
+$color-gray-5: #D7D7D7;
+$color-gray-6: #E3E3E3;
+$color-gray-7: #EAEAEA;
+$color-gray-8: #F2F2F2;
+$color-gray-9: #F5F5F5;
+$color-gray-10: #F8F8F8;
+$color-gray-11: #FBFBFB;
+$color-white: #FFFFFF;
+$color-black: #000000;
+//ALERT COLORS
+$color-alert-1: #60C780;
+$color-alert-2: #EA504C;
+//SPACES
+$space-size-1: 4px;
+$space-size-2: 8px;
+$space-size-3: 16px;
+$space-size-4: 24px;
+$space-size-5: 32px;
+$space-size-6: 40px;
+$space-size-7: 48px;
+$space-size-8: 56px;
+$space-size-9: 64px;
+$space-size-10: 72px;
+$space-size-11: 80px;
+$space-size-12: 88px;
+$space-size-13: 96px;
+$space-size-14: 120px;
+$space-size-15: 168px;
+//SPACES-ICONS
+$space-icon-sm: 24px;
+$space-icon-md: 32px;
+$space-icon-lg: 38px;
+//GRIDS
+$col-space-xs: 24px;
+$col-space-sm: 24px;
+$col-space-md: 24px;
+$col-space-lg: 32px;
+$col-space-xl: 32px;
+$col-xs: 60px;
+$col-sm: 48px;
+$col-md: 84px;
+$col-lg: 50px;
+$col-xl: 72px;
+@mixin space-width($w, $x) {
+	@include px($x);
+	@include w(calc(#{$w} - (#{$x} * 2)));
+}
+@mixin space-margin-width($w, $x) {
+	@include mx($x);
+	@include w(calc(#{$w} - (#{$x} * 2)));
+}
+@mixin space-h($w, $x) {
+	@include py($x);
+	@include h(calc(#{$w} - (#{$x} * 2)));
+}
+//WIDTHS & HEIGHTS
+@mixin w($n) { width: $n; }
+@mixin h($n) { height: $n; }
+@mixin mw($n) { max-width: $n; }
+@mixin mh($n) { max-height: $n; }
+@mixin miw($n) { min-width: $n; }
+@mixin mih($n) { min-height: $n; }
+@mixin area($n) {
+	@include w($n);
+	@include h($n);
+}
+//FLEX
+@mixin fx($n, $c) {
+  display: flex;
+  flex-direction: $n;
+  align-items: $c;
+}
+//FLEX-WRAP
+@mixin fwrap($n) {
+	display: flex;
+	flex-wrap: $n;
+}
+@mixin fg($n) { flex-grow: $n }
+@mixin ai($n) { align-items: $n; }
+@mixin jc($n) { justify-content: $n; }
+//POSITION
+@mixin pos($n) { position: $n; }
+@mixin post($n) { top: $n; }
+@mixin posb($n) { bottom: $n; }
+@mixin posl($n) { left: $n; }
+@mixin posr($n) { right: $n; }
+//MARGINS
+@mixin mt($n) { margin-top: $n; }
+@mixin mb($n) { margin-bottom: $n; }
+@mixin ml($n) { margin-left: $n; }
+@mixin mr($n) { margin-right: $n; }
+@mixin mx($n) {
+	@include ml($n);
+	@include mr($n);
+}
+@mixin my($n) {
+	@include mt($n);
+	@include mb($n);
+}
+@mixin m($n) {
+	@include mx($n);
+	@include my($n);
+}
+//PADDINGS
+@mixin pt($n) { padding-top: $n; }
+@mixin pb($n) { padding-bottom: $n; }
+@mixin pl($n) { padding-left: $n; }
+@mixin pr($n) { padding-right: $n; }
+@mixin px($n) {
+	@include pl($n);
+	@include pr($n);
+}
+@mixin py($n) {
+	@include pt($n);
+	@include pb($n);
+}
+@mixin p($n) {
+	@include px($n);
+	@include py($n);
+}
+//GERAL STYLING
+@mixin bg($n) { background-color: $n; }
+@mixin shadow($x, $y, $f, $c) {
+	box-shadow: $x $y $f $c;
+}
+@mixin b($n, $s, $c) {
+	@include bx($n);
+	@include by($n);
+	@include bs($s);
+	@include bc($c);
+}
+//FONTS STYLING
+@mixin fc($n) { color: $n; }
+@mixin fill($n) { fill: $n; }
+@mixin ff($n) { font-family: $n; }
+@mixin fs($n) { font-size: $n; }
+@mixin ft($n) { font-style: $n; }
+@mixin fw($n) { font-weight: $n; }
+@mixin lh($n) { line-height: $n; }
+@mixin ls($n) { letter-spacing: $n; }
+@mixin justify { text-align: justify; }
+@mixin uppercase { text-transform: uppercase; }
+//TEXT STYLING
+@mixin td($n) { text-decoration: $n; }
+@mixin ta($n) { text-align: $n; }
+@mixin tt($n) { text-transform: $n; }
+//BORDER STYLING
+@mixin bt($n) { border-top: $n; }
+@mixin bb($n) { border-bottom: $n; }
+@mixin bl($n) { border-left: $n; }
+@mixin br($n) { border-right: $n; }
+@mixin r($n) { border-radius: $n; }
+@mixin bc($n) { border-color: $n; }
+@mixin bs($n) { border-style: $n; }
+@mixin bx($n) {
+	@include bl($n);
+	@include br($n);
+}
+@mixin by($n) {
+	@include bt($n);
+	@include bb($n);
+}
+@mixin b($n, $s, $c) {
+	@include bx($n);
+	@include by($n);
+	@include bs($s);
+	@include bc($c);
+}
+//DIVIDERS
+@mixin divider-top($size) {
+	border-top-width: $size;
+	border-top-color: $color-gray-9;
+	border-top-style: solid;
+}
+@mixin divider-bottom($size) {
+	border-bottom-width: $size;
+	border-bottom-color: $color-gray-9;
+	border-bottom-style: solid;
+}
+%scrolly { overflow-y: scroll; }
+%scrollx { overflow-x: scroll; }
+%strong { font-weight: bold; }
+%pointer { cursor: pointer; }
+@import '_fonts';

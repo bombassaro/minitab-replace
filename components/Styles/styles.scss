@@ -1,0 +1,53 @@
+@import '_base';
+* {
+	@include m(0px);
+	@include p(0px);
+}
+html, body {
+	@include area(100%);
+	@include ff($font-primary);
+}
+a {
+  text-decoration: none;
+}
+.menu-page {
+	@include bg($color-black);
+	@include fx(column, center);
+	@include h(100vh);
+	@include jc(center);
+	@include m(0px);
+	@include p(0px);
+	@include w(100vw);
+	p {
+		@include pb(32px);
+		@include ta(center);
+		@include w(100%);
+		a {
+			@extend %font-menulist;
+			@include fc($color-white);
+		}
+	}
+}
+.slides {
+	@include fx(column, center);
+	@include h(100vh);
+	@include jc(center);
+	@include ta(center);
+	@include px(32px);
+	@include w(calc(100% - 64px));
+	h1 {
+		@include pb(40px);
+	}
+	&.home {
+		@include bg($color-black);
+		@include fc($color-white);
+		h1 {
+			@extend %font-hometitle;
+		}
+		h2 {
+			@extend %font-homesubtitle;
+			@include fc($color-gray-4);
+		}
+	}
+	&.metodologia {}
+}

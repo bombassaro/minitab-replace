@@ -14,15 +14,12 @@ const execute = (body) => {
       .catch((error) => reject(error))
   })
 }
-
 const saveData = (body) => {
   let l = body.length
   let n = 100
-    const chunks = array_chunks(body, n)
-    console.log(`savedata.body.length`, l, n, chunks.length)
-    const promises = map(chunks, (item) => execute(item))
+  const chunks = array_chunks(body, n)
+  console.log(`savedata.body.length`, l, n, chunks.length)
+  const promises = map(chunks, (item) => execute(item))
   return Promise.all(promises)
-  // console.log(`savedata.chunks`, chunks)
-  
 }
 module.exports = {saveData}

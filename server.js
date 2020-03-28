@@ -6,6 +6,7 @@ const parser = require('body-parser')
 const server = require('http').Server(app)
 const exame = require('./server/exame/routes')
 const pacote = require('./server/pacote/routes')
+const especificacao = require('./server/especificacao/routes')
 
 const dev = process.env.NODE_ENV !== 'production'
 const port = process.env.PORT
@@ -27,6 +28,7 @@ nextApp.prepare().then(() => {
 	app.use(parser.urlencoded({extended: true}))
 	app.use('/api/exame', exame);
 	app.use('/api/pacote', pacote);
+	app.use('/api/especificacao', especificacao);
 	// react routes
 	app.get('*', (req, res) => {
 		return nextHandler(req, res)

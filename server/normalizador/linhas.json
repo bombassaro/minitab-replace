@@ -1,0 +1,30 @@
+[
+  {
+    "INPUT": "200",
+    "OUTPUT": "2"
+  },
+  {
+    "INPUT": "201",
+    "OUTPUT": "2"
+  },
+  {
+    "INPUT": "202",
+    "OUTPUT": "3"
+  },
+  {
+    "INPUT": "300",
+    "OUTPUT": "3"
+  },
+  {
+    "INPUT": "302",
+    "OUTPUT": "2"
+  },
+  {
+    "INPUT": "400",
+    "OUTPUT": "3"
+  },
+  {
+    "INPUT": "401",
+    "OUTPUT": "3"
+  }
+]

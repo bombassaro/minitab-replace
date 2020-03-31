@@ -5,6 +5,7 @@ const request = require('request-promise')
 const Model = require('./model')
 const domain = process.env.MIDDLEWR_URL
 const headers = {'Accept': 'application/json', 'Content-Type': 'application/json'}
+const exameNrmlzr = require('../normalizador/actions')
 
 const parseFile = (path) => {
   return new Promise((resolve,reject)=> {
@@ -22,7 +23,8 @@ const parseData = (result) => {
     let index = {}
     map(result, (item) => {
       len = len + 1
-      let {FILME, EXAME, ALVO, MIN, MAX} = item
+      let {FILME, EXAME: EXAME_TO_NRMLZ, ALVO, MIN, MAX} = item
+      let EXAME = exameNrmlzr(EXAME_TO_NRMLZ)
       let obj = {FILME, EXAME, ALVO, MIN, MAX}
       list.push(obj)
     })

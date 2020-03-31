@@ -4,6 +4,7 @@ const {filter, map} = require('lodash')
 const fs = require('fs')
 const domain = process.env.MIDDLEWR_URL
 const headers = {'Accept': 'application/json', 'Content-Type': 'application/json'}
+const {exameNrmlzr, filmeNrmlzr, linhaNrmlzr} = require('../normalizador/actions')
 
 const savePacote = (body) => {
   return new Promise((resolve,reject) => {
@@ -39,9 +40,9 @@ const parseData = (result, pacoteid, filters) => {
     map(result, (item) => {
       len = len + 1
       let {
-        EXAME,
-        LINHA,
-        FILME,
+        EXAME: EXAME_TO_NRMLZ,
+        LINHA: LINHA_TO_NRMLZ,
+        FILME: FILME_TO_NRMLZ,
         MIN,
         MAX,
         MEDIA,
@@ -55,6 +56,9 @@ const parseData = (result, pacoteid, filters) => {
         X4,
         X5
       } = item
+      let FILME = filmeNrmlzr(FILME_TO_NRMLZ)
+      let EXAME = exameNrmlzr(EXAME_TO_NRMLZ)
+      let LINHA = linhaNrmlzr(LINHA_TO_NRMLZ)
       if(index.EXAME.indexOf(EXAME) === -1) index.EXAME.push(EXAME)
       if(index.LINHA.indexOf(LINHA) === -1) index.LINHA.push(LINHA)
       if(index.FILME.indexOf(FILME) === -1) index.FILME.push(FILME)

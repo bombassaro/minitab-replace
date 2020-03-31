@@ -1,29 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap');
 // tokens
-$font-primary: 'Montserrat', sans-serif;
-$font-secondary: 'Montserrat', sans-serif;
-$font-tertiary: 'Montserrat', sans-serif;
+$font-primary: 'Share Tech Mono', monospace;
+$font-secondary: 'Share Tech Mono', monospace;
+$font-tertiary: 'Share Tech Mono', monospace;
 // extends
 // ordinaries
-%font-menulist {
-  @include fs(28px);
-	@include fw(800);
-}
-%font-hometitle {
-  @include fs(24px);
-  @include lh(28px);
-  @include fw(700);
-  @media(min-width: $md) {
-    @include fs(38px);
-    @include lh(48px);
-  }
-}
-%font-homesubtitle {
-  @include fs(16px);
-  @include lh(22px);
-  @include fw(400);
-  @media(min-width: $md) {
-    @include fs(18px);
-    @include lh(22px);
-  }
-}

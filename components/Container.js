@@ -1,22 +1,9 @@
-import React from 'react'
-
-import Example from './Example'
-import Title from './Title'
-
-import './Styles/styles.css';
-
-const Container = () => {
+import './Styles/styles.css'
+const Container = (props) => {
   return (
     <div className='MainContainer'>
-      <Example />
-      <Title />
-      <Title />
-      <Title />
-      <Title />
-      <Title />
-      <Title />
+      {props.children}
     </div>
   )
 }
-
-export default Container;
+export default Container

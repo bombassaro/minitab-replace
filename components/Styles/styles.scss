@@ -2,6 +2,7 @@
 * {
 	@include m(0px);
 	@include p(0px);
+	@include fs(14px);
 }
 html, body {
 	@include area(100%);
@@ -10,44 +11,105 @@ html, body {
 a {
   text-decoration: none;
 }
-.menu-page {
-	@include bg($color-black);
-	@include fx(column, center);
-	@include h(100vh);
-	@include jc(center);
-	@include m(0px);
-	@include p(0px);
-	@include w(100vw);
-	p {
-		@include pb(32px);
-		@include ta(center);
-		@include w(100%);
-		a {
-			@extend %font-menulist;
-			@include fc($color-white);
-		}
+h3 {
+	@include fs(24px);
+	@include mb(10px);
+}
+select {
+	@include p(5px);
+	@include w(100%);
+	option {
+		@include p(5px);
+		@include mb(5px);
+		cursor: pointer;
 	}
 }
-.slides {
-	@include fx(column, center);
-	@include h(100vh);
+ul {
+	@include b(1px, solid, rgba(0,0,0,0.2));
+	@include p(10px);
+	overflow-y: scroll;
+}
+li {
+	@include fx(row, flex-start);
+	@include p(5px);
+	cursor: pointer;
+	&:hover {
+		@include bg(rgba(0,0,0,0.05));
+	}
+	&.selected {
+		@include bg(rgba(0,0,0,0.15));
+	}
+}
+i.material-icons {
+	@include fs(14px);
+	@include mr(5px);
+}
+.MainContainer {
+	@include fx(row, flex-start);
+	@include jc(flex-start);
+	@include p(20px);
+	@include w(calc(100% - 40px));
+}
+.MainPacotes {
+	// @include mw(800px);
+	@include w(100%);
+	select {
+		@include fs(12px);
+	}
+}
+.GroupDivisor {
+	@include fx('row', 'flex-start');
+	& > div {
+		@include w(50%);
+	}
+}
+.CalcularBox {
+	@include ml(20px);
+	ul {
+		@include h(333px);
+		@include my(10px);
+	}
+}
+.ResultadosBox {
+	@include ml(20px);
+	ul {
+		@include h(380px);
+		@include my(10px);
+	}
+}
+.FieldSearch {
+	@include mb(20px);
+	&.Exames {
+		@include ml(20px);
+		@include w(calc(100% - 20px));
+	}
+	&.Pacotes ul {
+		@include h(80px);
+		overflow-y: scroll;
+	}
+	&.Exames ul {
+		@include h(380px);
+	}
+	&.Filmes ul {
+		@include h(200px);
+	}
+	&.Linhas ul {
+		@include h(100px);
+	}
+}
+
+.ButtonCalculate {
+	@include fx(row, center);
 	@include jc(center);
-	@include ta(center);
-	@include px(32px);
-	@include w(calc(100% - 64px));
-	h1 {
-		@include pb(40px);
+	@include b(1px, solid, rgba(0,0,0,0.3));
+	@include bg(rgba(0,0,0,0.1));
+	@include h(35px);
+	cursor: pointer;
+	p {
+		@include fc(rgba(0,0,0,1));
+		@include ta(center);
 	}
-	&.home {
-		@include bg($color-black);
-		@include fc($color-white);
-		h1 {
-			@extend %font-hometitle;
-		}
-		h2 {
-			@extend %font-homesubtitle;
-			@include fc($color-gray-4);
-		}
+	&:hover {
+		@include bg(rgba(0,0,0,0.2));
 	}
-	&.metodologia {}
 }

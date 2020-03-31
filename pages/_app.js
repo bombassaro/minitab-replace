@@ -18,6 +18,7 @@ export default class MyApp extends App {
           <link rel='icon' sizes='192x192' href='/static/images/icons-192.png'/>
           <link rel='manifest' href='/static/manifest.json'/>
           <link rel='shortcut icon' href='/static/images/favicon.ico'/>
+          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
           <title>XPROG</title>
         </Head>
         <Component {...this.props} />

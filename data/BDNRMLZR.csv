@@ -1,0 +1,103 @@
+ENTRADA,SAIDA
+Alongamento DM,Alongamento DM
+Alongamento DT,Alongamento DT
+Brilho 45°,Brilho 45°
+Brilho Matte,Brilho Matte
+COF  NT/NT - Est.,COF NT-NT est
+COF CHA/CHA - din - 24h,COF T-T din
+COF CHA/CHA - Din.,COF T-T din
+COF CHA/CHA - Din. Imediato,COF T-T din imediato
+COF CHA/CHA - Est.,COF CHA-CHA - est 
+COF CHA/CHA - Est. - Imediato,COF CHA-CHA - est imediato
+COF CHA/CHA - est. 24h,COF CHA-CHA - est
+COF COR/COR - Din.,COF T-T din
+COF COR/COR - din. - 12h,COF T-T din
+COF COR/COR - din. - 24h,COF T-T din
+COF COR/COR - Din. - Imediato,COF T-T din imediato
+COF COR/COR - Din. 24h,COF T-T din
+COF COR/COR - Est.,COF T-T est
+COF COR/COR - est. - 24h,COF T-T est
+COF COR/COR - Est. - Imediato,COF T-T est imediato
+COF COR/COR din 24h,COF COR-COR din 24h
+COF COR-COR - din. - 24h,COF T-T din
+COF COR-COR din imediato,COF T-T din imediato
+COF EXT/EXT din,COF EXT-EXT din
+COF EXT/EXT din - 24h,COF EXT-EXT din
+COF EXT/EXT din - imediato,COF EXT-EXT din imediato
+COF EXT/EXT est - 24h,COF EXT-EXT est
+COF EXT/EXT est - imediato,COF EXT-EXT est imediato
+COF EXT/EXT est.,COF EXT-EXT est
+COF EXT/M din.,COF EXT-M din
+COF EXT/MET din. - 24hs,COF EXT-M din
+COF EXT-EXT din 24h,COF EXT-EXT din
+COF INT/INT - din.,COF INT-INT din
+COF INT/INT - din. 24h,COF INT-INT din
+COF INT/INT - din. Imediato,COF INT-INT din imediato
+COF INT/INT - est.,COF INT-INT est
+COF INT/INT - est. 24h,COF INT-INT est
+COF INT/INT - est. Imediato,COF INT-INT est imediato
+COF INT/INT din - imediato,COF INT-INT din imediato
+COF INT/INT din. - 24hs,COF INT-INT din
+COF INT/INT est - imediato,COF INT-INT est imediato
+COF INT/INT est. - 24hs,COF INT-INT est
+COF INT/M - din.,COF INT-M din
+COF INT/MET din. - 24hs,COF INT-M din
+COF INT-INT - din. Imediato,COF INT-INT din imediato
+COF NT/NT - din - 24h,COF NT-NT din
+COF NT/NT - Din.,COF NT-NT din
+COF NT/NT - din. - 12h,COF NT-NT din
+COF NT/NT - Din. - 40°C,COF NT-NT din
+COF NT/NT - Din. - 60°C,COF NT-NT din
+COF NT/NT - Din. 24h,COF NT-NT din
+COF NT/NT - DIN. Imediato,COF NT-NT din imediato
+COF NT/NT - est. - 24h,COF NT-NT est
+COF NT/NT - Est. - 40°C,COF NT-NT est
+COF NT/NT - Est. Imediato,COF NT-NT est imediato
+COF NT/NT din 24h DSM,COF NT-NT din
+COF NT-NT din 24h,COF NT-NT din
+COF NT-NT din imediato,COF NT-NT din imediato
+COF T/T din 24h DSM,COF T-T din
+COF T/T din imediato DSM,COF T-T din imediato
+CORONA LM,Tratamento Superficial CORONA LM
+CORONA LO,Tratamento Superficial CORONA LO
+Densidade,Densidade
+Densidade Óptica,Densidade Óptica
+Espessura,Espessura
+Espessura Calculada,Espessura
+Estabilidade Dimensional DM,Estabilidade Dimensional DM
+Estabilidade Dimensional DT,Estabilidade Dimensional DT
+Força de selagem CHA/CHA,Força de selagem T-T
+Força de selagem COR/COR,Força de selagem T-T
+Força de Selagem EXT/EXT,Força de Selagem EXT-EXT
+Força de Selagem INT/EXT,Força de Selagem INT-EXT
+Força de Selagem INT/INT,Força de Selagem INT-INT
+Força de selagem NT - 85°C,Força de Selagem INT-INT
+Força de Selagem NT/NT,Força de Selagem INT-INT
+Força de Selagem NT/T,Força de Selagem INT-EXT
+Força de Tração DM,Força de Tração DM
+Força de Tração DT,Força de Tração DT
+Gramatura,Gramatura
+Haze/difusão,Haze
+Módulo Elástico DM,Módulo Elástico DM
+Módulo Elástico DT,Módulo Elástico DT
+Módulo Secante 2% DM,Módulo Secante 2% DM
+Módulo Secante 2% DT,Módulo Secante 2% DT
+Rendimento,Rendimento
+Tensão superf CHAMA prod final,Tensão Superficial
+Tensão superf. COR prod final,Tensão Superficial
+Tensão Superficial CHAMA LM,Tratamento Superficial CHAMA LM
+Tensão Superficial CHAMA LO,Tratamento Superficial CHAMA LO
+Tensão Superficial CORONA LM,Tratamento Superficial CORONA LM
+Tensão Superficial CORONA LO,Tratamento Superficial CORONA LO
+TIS COR/COR,TIS T-T
+TIS EXT/EXT,TIS EXT/EXT
+TIS INT/INT,TIS INT/INT
+TIS NT/NT,TIS NT/NT
+TIS NT/T,TIS NT/T
+TPO2,TPO2
+TPVA,TPVA
+Transmitância,Haze
+Tratamento Superficial CHAMA,Tensão Superficial
+Tratamento Superficial CORONA,Tensão Superficial
+COF COR-COR din 24h,COF COR-COR din 24h
+COF NT-NT din 24h,COF NT-NT din 24h

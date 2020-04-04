@@ -14,6 +14,7 @@ const Schema = new mongoose.Schema(
     ITEM: {type: Number},
     MR: {type: String},
     DATA: {type: String},
+    DATE: {type: Number},
     X1: {type: Number},
     X2: {type: Number},
     X3: {type: Number},

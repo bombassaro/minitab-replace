@@ -24,9 +24,12 @@ select {
 		cursor: pointer;
 	}
 }
+input {
+	@include p(5px);
+	@include mb(10px);
+}
 ul {
 	@include b(1px, solid, rgba(0,0,0,0.2));
-	@include p(10px);
 	overflow-y: scroll;
 }
 li {
@@ -97,13 +100,13 @@ i.material-icons {
 		@include h(100px);
 	}
 }
-
 .ButtonCalculate {
 	@include fx(row, center);
 	@include jc(center);
 	@include b(1px, solid, rgba(0,0,0,0.3));
 	@include bg(rgba(0,0,0,0.1));
 	@include h(35px);
+	@include w(85px);
 	cursor: pointer;
 	p {
 		@include fc(rgba(0,0,0,1));

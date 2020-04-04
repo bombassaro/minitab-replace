@@ -22,12 +22,28 @@ const loadEspcfcc = async (callback) => {
     "filters": {},
     "keys": [],
     "sorters": {
-      "limit": 1000,
+      "limit": 1000000,
       "skip": 0,
       "sort": "-_id"
     }
   }
   const path = `${MIDDLEWR_URL}/especificacao/filter`
+  const res = await doFetch(method, path, body)
+  callback(res.items)
+  return res
+}
+const loadExames = async (filters, callback) => {
+  const method = `POST`
+  const body = {
+    "filters": filters,
+    "keys": [],
+    "sorters": {
+      "limit": 1000000,
+      "skip": 0,
+      "sort": "-_id"
+    }
+  }
+  const path = `${MIDDLEWR_URL}/exame/filter`
   const res = await doFetch(method, path, body)
   callback(res.items)
   return res
@@ -39,7 +55,7 @@ const doAnalyze = async (SELECTED, callback) => {
     "filters": SELECTED,
     "keys": [],
     "sorters": {
-      "limit": 1000,
+      "limit": 1000000,
       "skip": 0,
       "sort": "-_id"
     }
@@ -52,5 +68,6 @@ const doAnalyze = async (SELECTED, callback) => {
 export {
   doAnalyze,
   loadEspcfcc,
+  loadExames,
   loadPacotes
 }

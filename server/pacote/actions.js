@@ -1,6 +1,7 @@
 const request = require('request-promise')
 const csv = require('csv-parser')
-const {filter, map} = require('lodash')
+const getTime = require('date-fns/getTime')
+const {map} = require('lodash')
 const fs = require('fs')
 const domain = process.env.MIDDLEWR_URL
 const headers = {'Accept': 'application/json', 'Content-Type': 'application/json'}
@@ -36,7 +37,6 @@ const parseData = (result, pacoteid, filters) => {
       FILME: [],
       TOTAL: 0
     }
-    // console.log(`filtered`, filtered.length)
     map(result, (item) => {
       len = len + 1
       let {
@@ -56,6 +56,9 @@ const parseData = (result, pacoteid, filters) => {
         X4,
         X5
       } = item
+      const sD = DATA.split("/")
+      const new_date = sD.length > 1 ? new Date(sD[2], sD[0] - 1, sD[1]) : null
+      const timestamp = getTime(new_date)
       let FILME = filmeNrmlzr(FILME_TO_NRMLZ)
       let EXAME = exameNrmlzr(EXAME_TO_NRMLZ)
       let LINHA = linhaNrmlzr(LINHA_TO_NRMLZ)
@@ -74,6 +77,7 @@ const parseData = (result, pacoteid, filters) => {
         ITEM,
         MR,
         DATA,
+        DATE: timestamp,
         X1,
         X2,
         X3,

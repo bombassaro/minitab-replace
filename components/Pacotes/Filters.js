@@ -8,20 +8,25 @@ const ComIcon = () => <i className="material-icons">commute</i>
 const AssIcon = () => <i className="material-icons">assignment</i>
 const BokIcon = () => <i className="material-icons">book</i>
 
-export default ({filters}) => {
-  const {EXAMES, FILMES, LINHAS} = filters
+export default ({filters, forceUpdate}) => {
+  const {DATE, EXAMES, FILMES, LINHAS} = filters
   const [SELECTED, setSelected] = React.useState({EXAME: [], FILME: [], LINHA: []})
   const [RESULTADO, setResultado] = React.useState({})
+  const [CONTENT, setContent] = React.useState({})
   const [UPDATED, setUpdated] = React.useState(false)
   React.useEffect(() => {
-    doAnalyze(SELECTED, (result) => {
-      if(!result.resume) {
-        setResultado([])
-      } else {
-        setResultado(result.resume)
-      }
-    })
-  }, [UPDATED])
+    if(forceUpdate) {
+      doAnalyze({DATE, ...SELECTED}, (result) => {
+        if(!result.resume) {
+          setResultado([])
+          setContent([])
+        } else {
+          setResultado(result.resume)
+          setContent(result.items)
+        }
+      })
+    }
+  }, [UPDATED, forceUpdate])
   const handleChange = (value, group) => {
     const payload = SELECTED
     const reset = () => {
@@ -86,44 +91,99 @@ export default ({filters}) => {
     )
   }
   return (
-    <div className='GroupDivisor'>
-      <div>
-        <div className='FieldSearch Filmes'>
-          <h3>FILMES</h3>
-          <ul>
-            <li onClick={() => handleChange("NENHUM", "FILME")}>NENHUM</li>
-            {map(FILMES, (FILME, key) => {
-              let isSelected = SELECTED["FILME"].indexOf(FILME) !== -1
-              return <li className={isSelected ? `selected` : ``} key={key} onClick={() => handleChangeOne(FILME, "FILME")}>{FILME}</li>
-            })}
-          </ul>
+    <React.Fragment>
+      <div className='GroupDivisor'>
+        <div>
+          <div className='FieldSearch Filmes'>
+            <h3>FILMES</h3>
+            <ul>
+              <li onClick={() => handleChange("NENHUM", "FILME")}>NENHUM</li>
+              {map(FILMES, (FILME, key) => {
+                let isSelected = SELECTED["FILME"].indexOf(FILME) !== -1
+                return <li className={isSelected ? `selected` : ``} key={key} onClick={() => handleChangeOne(FILME, "FILME")}>{FILME}</li>
+              })}
+            </ul>
+          </div>
+          <div className='FieldSearch Linhas'>
+            <h3>LINHAS</h3>
+            <ul>
+              <li onClick={() => handleChange("NENHUM", "LINHA")}>NENHUM</li>
+              {map(LINHAS, (LINHA, key) => {
+                let isSelected = SELECTED["LINHA"].indexOf(LINHA) !== -1
+                return <li className={isSelected ? `selected` : ``} key={key} onClick={() => handleChangeOne(LINHA, "LINHA")}>{LINHA}</li>
+              })}
+            </ul>
+          </div>
         </div>
-        <div className='FieldSearch Linhas'>
-          <h3>LINHAS</h3>
-          <ul>
-            <li onClick={() => handleChange("NENHUM", "LINHA")}>NENHUM</li>
-            {map(LINHAS, (LINHA, key) => {
-              let isSelected = SELECTED["LINHA"].indexOf(LINHA) !== -1
-              return <li className={isSelected ? `selected` : ``} key={key} onClick={() => handleChangeOne(LINHA, "LINHA")}>{LINHA}</li>
-            })}
-          </ul>
+        <div>
+          <div className='FieldSearch Exames'>
+            <h3>EXAMES</h3>
+            <ul>
+              <li onClick={() => handleChange("NENHUM", "EXAME")}>NENHUM</li>
+              {map(EXAMES, (EXAME, key) => {
+                let isSelected = SELECTED["EXAME"].indexOf(EXAME) !== -1
+                return <li className={isSelected ? `selected` : ``} key={key} onClick={() => handleChangeOne(EXAME, "EXAME")}>{EXAME}</li>
+              })}
+            </ul>
+          </div>
+        </div>
+        <div>
+          <Calcular />
         </div>
       </div>
-      <div>
-        <div className='FieldSearch Exames'>
-          <h3>EXAMES</h3>
-          <ul>
-            <li onClick={() => handleChange("NENHUM", "EXAME")}>NENHUM</li>
-            {map(EXAMES, (EXAME, key) => {
-              let isSelected = SELECTED["EXAME"].indexOf(EXAME) !== -1
-              return <li className={isSelected ? `selected` : ``} key={key} onClick={() => handleChangeOne(EXAME, "EXAME")}>{EXAME}</li>
-            })}
-          </ul>
+      <div className='GroupDivisor'>
+        <div className='TableCpto'>
+          <h3>TABELA</h3>
+          <div className='scrollable'>
+            <div className='line header'>
+              <li>EXAME</li>
+              <li>LINHA</li>
+              <li>FILME</li>
+              <li>MIN</li>
+              <li>MAX</li>
+              <li>MEDIA</li>
+              <li>DP</li>
+              <li>ITEM</li>
+              <li>MR</li>
+              <li>DATA</li>
+              <li>X1</li>
+              <li>X2</li>
+              <li>X3</li>
+              <li>X4</li>
+              <li>X5</li>
+            </div>
+            <Lines CONTENT={CONTENT} />
+          </div>
+        </div>
+        <div>
+          <h3>GRÁFICO</h3>
+          <Lines />
         </div>
       </div>
-      <div>
-        <Calcular />
-      </div>
-    </div>
+    </React.Fragment>
   )
 }
+
+const Lines = ({CONTENT}) => map(CONTENT, (ITEM) => {
+  return (
+    <div className='line'>
+      <li>{ITEM.EXAME}</li>
+      <li>{ITEM.LINHA}</li>
+      <li>{ITEM.FILME}</li>
+      <li>{ITEM.MIN}</li>
+      <li>{ITEM.MAX}</li>
+      <li>{ITEM.MEDIA}</li>
+      <li>{ITEM.DP}</li>
+      <li>{ITEM.ITEM}</li>
+      <li>{ITEM.MR}</li>
+      <li>{ITEM.DATA}</li>
+      <li>{ITEM.X1}</li>
+      <li>{ITEM.X2}</li>
+      <li>{ITEM.X3}</li>
+      <li>{ITEM.X4}</li>
+      <li>{ITEM.X5}</li>
+    </div>
+  )
+})
+
+

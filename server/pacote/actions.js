@@ -58,7 +58,7 @@ const parseData = (result, pacoteid, filters) => {
       } = item
       const sD = DATA.split("/")
       const new_date = sD.length > 1 ? new Date(sD[2], sD[0] - 1, sD[1]) : null
-      const timestamp = getTime(new_date)
+      const timestamp = getTime(new_date.setHours(20))
       let FILME = filmeNrmlzr(FILME_TO_NRMLZ)
       let EXAME = exameNrmlzr(EXAME_TO_NRMLZ)
       let LINHA = linhaNrmlzr(LINHA_TO_NRMLZ)

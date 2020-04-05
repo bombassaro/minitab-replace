@@ -80,6 +80,7 @@ i.material-icons {
 		@include my(10px);
 	}
 }
+
 .FieldSearch {
 	@include mb(20px);
 	&.Exames {
@@ -94,7 +95,7 @@ i.material-icons {
 		@include h(380px);
 	}
 	&.Filmes ul {
-		@include h(200px);
+		@include h(221px);
 	}
 	&.Linhas ul {
 		@include h(100px);
@@ -114,5 +115,46 @@ i.material-icons {
 	}
 	&:hover {
 		@include bg(rgba(0,0,0,0.2));
+	}
+}
+.loading {
+	.ResultadosBox {
+		ul {
+			@include bg(rgba(0,0,0,0.1));
+		}
+	}
+	.FieldSearch {
+		ul {
+			@include bg(rgba(0,0,0,0.1));
+		}
+	}
+}
+.TableCpto {
+	@include mr(20px);
+	@include w(calc(100% - 20px));
+	.scrollable {
+		overflow-x: scroll;
+		overflow-y: scroll;
+		@include h(300px);
+		@include bg(rgba(0,0,0,0.05));
+		@include w(100%);
+	}
+	.header {
+		@include fw(bold);
+	}
+	.line {
+		display: inline-flex;
+	}
+	li {
+		display: block;
+		@include w(60px);
+	}
+	li:nth-child(1),
+	li:nth-child(3) {
+		@include bg(rgba(0,0,0,0.05));
+		@include w(200px);
+	}
+	li:nth-child(10) {
+		@include w(100px);
 	}
 }

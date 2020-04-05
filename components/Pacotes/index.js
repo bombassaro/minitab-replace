@@ -62,20 +62,14 @@ export default () => {
   }
   return (
     <div className={`MainPacotes ${LOADING ? `loading` : ``}`}>
-      <div className='GroupDivisor'>
-        <div>
-          <div className='FieldSearch Pacotes'>
-            <h3>PACOTES</h3>
-            <InputMask mask="99/99/9999" defaultValue={DTFLTRS} onChange={({target}) => setDtFltrS(target.value)} />
-            <InputMask mask="99/99/9999" defaultValue={DTFLTRE} onChange={({target}) => setDtFltrE(target.value)} />
-            <div className="ButtonCalculate" onClick={() => handleFilterClick()}><p>FILTRAR</p></div>
-          </div>
+      <Filters filters={{...FILTERS, EXAMES, FILMES, LINHAS}} forceUpdate={!LOADING}>
+        <div className='FieldSearch Pacotes'>
+          <h3>FILTROS</h3>
+          <InputMask mask="99/99/9999" defaultValue={DTFLTRS} onChange={({target}) => setDtFltrS(target.value)} /><br />
+          <InputMask mask="99/99/9999" defaultValue={DTFLTRE} onChange={({target}) => setDtFltrE(target.value)} />
+          <div className="ButtonCalculate" onClick={() => handleFilterClick()}><p>PESQUISAR</p></div>
         </div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <Filters filters={{...FILTERS, EXAMES, FILMES, LINHAS}} forceUpdate={!LOADING} />
+      </Filters>
     </div>
   )
 }

@@ -50,8 +50,8 @@ i.material-icons {
 .MainContainer {
 	@include fx(row, flex-start);
 	@include jc(flex-start);
-	@include p(20px);
-	@include w(calc(100% - 40px));
+	// @include p(20px);
+	@include w(100%);
 }
 .MainPacotes {
 	// @include mw(800px);
@@ -60,10 +60,35 @@ i.material-icons {
 		@include fs(12px);
 	}
 }
+.ChartDivisor {
+	@include mx(20px);
+}
 .GroupDivisor {
-	@include fx('row', 'flex-start');
-	& > div {
-		@include w(50%);
+	@include fx(column, flex-start);
+	@include bg(rgba(0,0,0,0.2));
+	@include p(20px);
+	@include h(100vh);
+	@include w(260px);
+	overflow-y: scroll;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	
+	// @include jc('flex-start');
+	// & > div {
+		// @include w(50%);
+	// }
+}
+.GroupExameFinal {
+	@include fx(column, flex-start);
+	@include mr(20px);
+	@include mt(20px);
+	@include ml(320px);
+	.Card {
+		@include b(1px, solid, rgba(0,0,0,0.15));
+		@include bg(rgba(0,0,0,0.05));
+		@include fx(row, flex-start);
+		@include p(20px);
 	}
 }
 .CalcularBox {
@@ -74,31 +99,28 @@ i.material-icons {
 	}
 }
 .ResultadosBox {
-	@include ml(20px);
+	@include mr(20px);
+	@include mw(300px);
+	@include w(100%);
 	ul {
-		@include h(380px);
-		@include my(10px);
+		border: none;
 	}
 }
 
 .FieldSearch {
 	@include mb(20px);
-	&.Exames {
-		@include ml(20px);
-		@include w(calc(100% - 20px));
-	}
-	&.Pacotes ul {
-		@include h(80px);
-		overflow-y: scroll;
-	}
-	&.Exames ul {
-		@include h(380px);
+	@include w(100%);
+	ul {
+		@include w(100%);
 	}
 	&.Filmes ul {
-		@include h(221px);
+		@include h(200px);
 	}
 	&.Linhas ul {
 		@include h(100px);
+	}
+	&.Exames ul {
+		@include h(200px);
 	}
 }
 .ButtonCalculate {
@@ -130,13 +152,13 @@ i.material-icons {
 	}
 }
 .TableCpto {
-	@include mr(20px);
-	@include w(calc(100% - 20px));
+	@include mw(400px);
+	@include w(100%);
 	.scrollable {
 		overflow-x: scroll;
 		overflow-y: scroll;
-		@include h(300px);
-		@include bg(rgba(0,0,0,0.05));
+		@include h(400px);
+		// @include bg(rgba(0,0,0,0.05));
 		@include w(100%);
 	}
 	.header {
@@ -157,4 +179,8 @@ i.material-icons {
 	li:nth-child(10) {
 		@include w(100px);
 	}
+}
+.chart-media-dot {
+	@include area(10px);
+	@include bg(rgba(0,0,0,0.05));
 }

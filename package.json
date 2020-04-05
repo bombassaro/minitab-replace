@@ -41,6 +41,7 @@
     "react-promise": "^3.0.2",
     "react-share": "^4.0.1",
     "react-svg-loader": "^3.0.3",
+    "recharts": "^1.8.5",
     "request": "^2.88.0",
     "request-promise": "^4.2.5"
   }

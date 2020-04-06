@@ -15,8 +15,8 @@ const getEspecificacoes = ({filters}) => {
     const {FILME, EXAME} = filters
     return getData({FILME, EXAME}).then((specs) => {
       if(!specs) return reject({error: `specs-not-found`})
-      const {FILME, EXAME, LINHA, ALVO, MIN, MAX} = specs
-      return resolve({FILME, EXAME, LINHA, ALVO, MIN, MAX})
+      const {FILME, EXAME, ALVO, MIN, MAX} = specs
+      return resolve({FILME, EXAME, ALVO, MIN, MAX})
     })
   })
 }

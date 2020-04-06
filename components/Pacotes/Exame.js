@@ -37,8 +37,8 @@ const ExameFinal = ({DATE, EXAME, SELECTED, HANDLE}) => {
   // }, [UPDATED, forceUpdate])
   if(!RESULTADO || !RESULTADO.specs) return false
   const Resultado = () => {
-    const ItemFilmes = () => <li className="FILME" onClick={() => handleChange(RESULTADO.specs.FILME, "FILME")}><AssIcon /> {RESULTADO.specs.FILME}</li>
-    const ItemLinhas = () => <li className="LINHA" onClick={() => handleChange(RESULTADO.specs.LINHA, "LINHA")}><AssIcon /> {RESULTADO.specs.LINHA}</li>
+    const ItemFilmes = () => <li className="FILME" onClick={() => handleChange(RESULTADO.specs.FILME, "FILME")}><BokIcon /> {RESULTADO.specs.FILME}</li>
+    const ItemLinhas = () => <li className="LINHA" onClick={() => handleChange(SELECTED.LINHA[0], "LINHA")}><ComIcon /> {SELECTED.LINHA[0]}</li>
     const ItemExames = () => <li className="EXAME" onClick={() => handleChange(RESULTADO.specs.EXAME, "EXAME")}><AssIcon /> {RESULTADO.specs.EXAME}</li>
     const Resultado = () => {
       // if(!RESULTADO || !RESULTADO.desvios) return false

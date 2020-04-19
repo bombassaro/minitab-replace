@@ -1,11 +1,15 @@
 import React from 'react'
 import {map, pull} from 'lodash'
 import ExameFinal from './Exame'
+import Relatorio from './Relatorio'
+import {doReport} from '../../service/actions'
 
 export default ({children, filters, forceUpdate}) => {
   const {DATE, EXAMES, FILMES, LINHAS} = filters
+  const [LOADING, setLoading] = React.useState(true)
   const [SELECTED, setSelected] = React.useState({EXAME: [], FILME: [], LINHA: []})
   const [UPDATED, setUpdated] = React.useState(false)
+  const [RESULTADO, setResultado] = React.useState({})
   const handleChange = (value, group) => {
     const payload = SELECTED
     const reset = () => {
@@ -34,10 +38,28 @@ export default ({children, filters, forceUpdate}) => {
     setSelected(payload)
     setUpdated(!UPDATED)
   }
-  const RenderExames = () => map(SELECTED.EXAME, (EXAME) => <ExameFinal DATE={DATE} EXAME={EXAME} SELECTED={SELECTED} HANDLE={{handleChange, handleChangeOne}} />)
+
+  React.useEffect(() => {
+    setLoading(true)
+    const FILTER = {
+      DATE,
+      EXAME: SELECTED.EXAME,
+      FILME: SELECTED.FILME,
+      LINHA: SELECTED.LINHA
+    }
+    doReport(FILTER, (result) => {
+      setResultado(result)
+      setLoading(false)
+    })
+  }, [DATE, UPDATED])
+
+  const RenderExames = () => map(RESULTADO, (RESULT) => <ExameFinal RESULT={RESULT} SELECTED={SELECTED} HANDLE={{handleChange, handleChangeOne}} />)
   return (
     <React.Fragment>
       <div className='GroupDivisor'>
+        <div className='FieldSearch Importar'>
+          <a href="/importar"><h3>PACOTES</h3></a>
+        </div>
         {children}
         <div className='FieldSearch Filmes'>
           <h3>FILMES</h3>
@@ -70,7 +92,13 @@ export default ({children, filters, forceUpdate}) => {
           </ul>
         </div>
       </div>
-      <RenderExames />
+      {LOADING ? 
+        <div className='GroupExameFinal'><pre>Loading</pre></div> : (
+        <React.Fragment>
+          <Relatorio RESULTADO={RESULTADO} />
+          <RenderExames />
+        </React.Fragment>
+      )}
     </React.Fragment>
   )
 }

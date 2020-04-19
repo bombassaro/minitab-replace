@@ -14,6 +14,9 @@ a {
 h3 {
 	@include fs(24px);
 	@include mb(10px);
+	span {
+		cursor: pointer;
+	}
 }
 select {
 	@include p(5px);
@@ -61,7 +64,7 @@ i.material-icons {
 	}
 }
 .ChartDivisor {
-	@include mx(20px);
+	@include ml(20px);
 }
 .GroupDivisor {
 	@include fx(column, flex-start);
@@ -89,6 +92,7 @@ i.material-icons {
 		@include bg(rgba(0,0,0,0.05));
 		@include fx(row, flex-start);
 		@include p(20px);
+		@include w(900px);
 	}
 }
 .CalcularBox {
@@ -122,6 +126,9 @@ i.material-icons {
 	&.Exames ul {
 		@include h(200px);
 	}
+	&.Importar {
+		cursor: pointer;
+	}
 }
 .ButtonCalculate {
 	@include fx(row, center);
@@ -152,7 +159,12 @@ i.material-icons {
 	}
 }
 .TableCpto {
-	@include mw(400px);
+	@include b(1px, solid, rgba(0,0,0,0.15));
+	@include bg(rgba(0,0,0,0.05));
+	@include fx(row, flex-start);
+	@include p(20px);
+	@include mt(20px);
+	@include mw(900px);
 	@include w(100%);
 	.scrollable {
 		overflow-x: scroll;
@@ -166,21 +178,43 @@ i.material-icons {
 	}
 	.line {
 		display: inline-flex;
+		&.red {
+			@include fc(red);
+		}
 	}
 	li {
 		display: block;
 		@include w(60px);
 	}
-	li:nth-child(1),
-	li:nth-child(3) {
-		@include bg(rgba(0,0,0,0.05));
-		@include w(200px);
+	&.TableReport {
+		li:nth-child(1),
+		li:nth-child(2) {
+			@include w(200px);
+		}
 	}
-	li:nth-child(10) {
-		@include w(100px);
+	&.TableExame {
+		li:nth-child(1),
+		li:nth-child(3) {
+			@include bg(rgba(0,0,0,0.05));
+			@include w(200px);
+		}
+		li:nth-child(10) {
+			@include w(100px);
+		}
 	}
 }
 .chart-media-dot {
 	@include area(10px);
 	@include bg(rgba(0,0,0,0.05));
+}
+.PageImport {
+	@include area(calc(100% - 40px));
+	@include p(20px);
+	.Label {
+		@include mb(10px);
+	}
+	.Warning {
+		@include mt(10px);
+		@include fc(#999);
+	}
 }

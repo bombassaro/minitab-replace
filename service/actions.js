@@ -65,8 +65,26 @@ const doAnalyze = async (SELECTED, callback) => {
   callback(res)
   return res
 }
+const doReport = async (SELECTED, callback) => {
+  const method = `POST`
+  delete SELECTED.PROJETO
+  const body = {
+    "filters": SELECTED,
+    "keys": [],
+    "sorters": {
+      "limit": 1000000,
+      "skip": 0,
+      "sort": "-_id"
+    }
+  }
+  const path = `${MIDDLEWR_URL}/exame/report`
+  const res = await doFetch(method, path, body)
+  callback(res)
+  return res
+}
 export {
   doAnalyze,
+  doReport,
   loadEspcfcc,
   loadExames,
   loadPacotes

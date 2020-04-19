@@ -1,48 +1,54 @@
 import React from 'react'
-import {map, orderBy} from 'lodash'
+import {filter, map, orderBy} from 'lodash'
 import Chart from './Chart'
-import {doAnalyze} from '../../service/actions'
 
 const FavIcon = () => <i className="material-icons">favorite</i>
 const ComIcon = () => <i className="material-icons">commute</i>
 const AssIcon = () => <i className="material-icons">assignment</i>
 const BokIcon = () => <i className="material-icons">book</i>
 
-const ExameFinal = ({DATE, EXAME, SELECTED, HANDLE}) => {
+const ExameFinal = ({RESULT, SELECTED, HANDLE}) => {
+  //DATE, EXAME, SELECTED, 
   const {handleChange, handleChangeOne} = HANDLE
-  const [RESULTADO, setResultado] = React.useState({})
-  const [CONTENT, setContent] = React.useState({})
-  const [LOADED, setLoaded] = React.useState(false)
-  const FILTER = {
-    DATE,
-    EXAME: EXAME,
-    FILME: SELECTED.FILME,
-    LINHA: SELECTED.LINHA
-  }
-  React.useEffect(() => {
-    if(!LOADED) {
-      doAnalyze(FILTER, (result) => {
-        if(!result.resume) {
-          setResultado([])
-          setContent([])
-        } else {
-          let items = orderBy(result.items, ['DATE', 'ITEM'])
-          setResultado(result.resume)
-          setContent(items)
-        }
-        setLoaded(true)
-      })
-    }
-  }, [LOADED])
+  // const [RESULTADO, setResultado] = React.useState({})
+  // const [CONTENT, setContent] = React.useState({})
+  // const [LOADED, setLoaded] = React.useState(false)
+  const [showTable, setShowTable] = React.useState(false)
+  if(!RESULT || !RESULT.items || RESULT.items.length === 0) return false
+  let RESULTADO = RESULT.resume
+  let CONTENT = orderBy(RESULT.items, ['DATE', 'ITEM'])
+
+  // const FILTER = {
+  //   DATE,
+  //   EXAME: EXAME,
+  //   FILME: SELECTED.FILME,
+  //   LINHA: SELECTED.LINHA
+  // }
+  // React.useEffect(() => {
+    // if(!LOADED) {
+      // doAnalyze(FILTER, (result) => {
+        // if(!result.resume) {
+          // setResultado([])
+          // setContent([])
+        // } else {
+          // let items = orderBy(result.items, ['DATE', 'ITEM'])
+          // setResultado(result.resume)
+          // setContent(items)
+        // }
+        // setLoaded(true)
+      // })
+    // }
+  // }, [LOADED])
   // }, [UPDATED, forceUpdate])
   if(!RESULTADO || !RESULTADO.specs) return false
+  const {specs, desvios, cpcpk} = RESULTADO
+  const {OUTLIERS} = desvios
   const Resultado = () => {
     const ItemFilmes = () => <li className="FILME" onClick={() => handleChange(RESULTADO.specs.FILME, "FILME")}><BokIcon /> {RESULTADO.specs.FILME}</li>
     const ItemLinhas = () => <li className="LINHA" onClick={() => handleChange(SELECTED.LINHA[0], "LINHA")}><ComIcon /> {SELECTED.LINHA[0]}</li>
     const ItemExames = () => <li className="EXAME" onClick={() => handleChange(RESULTADO.specs.EXAME, "EXAME")}><AssIcon /> {RESULTADO.specs.EXAME}</li>
     const Resultado = () => {
       // if(!RESULTADO || !RESULTADO.desvios) return false
-      const {specs, desvios, cpcpk} = RESULTADO
       return (
         <>
           <li>Len: {desvios && desvios.TOTAL_ITEMS}</li>
@@ -71,9 +77,11 @@ const ExameFinal = ({DATE, EXAME, SELECTED, HANDLE}) => {
       </div>
     )
   }
-  const Lines = ({CONTENT}) => map(CONTENT, (ITEM) => {
+  const Lines = () => map(CONTENT, (ITEM) => {
+    let isOutlier = filter(OUTLIERS, {_id: ITEM._id}).length
+    // console.log(OUTLIERS.length, {_id: ITEM._id}, isOutlier.length)
     return (
-      <div className='line'>
+      <div className={`line ${isOutlier ? `red` : ``}`}>
         <li>{ITEM.EXAME}</li>
         <li>{ITEM.LINHA}</li>
         <li>{ITEM.FILME}</li>
@@ -95,7 +103,7 @@ const ExameFinal = ({DATE, EXAME, SELECTED, HANDLE}) => {
   return (
     <React.Fragment>
       <div className='GroupExameFinal'>
-        <h3>{RESULTADO.specs.EXAME}</h3>
+        <h3>{RESULTADO.specs.EXAME} <span onClick={() => setShowTable(!showTable)}>{showTable ? `esconder tabela` : `ver tabela`}</span></h3>
         <div className='Card'>
           <div>
             <Resultado />
@@ -103,7 +111,9 @@ const ExameFinal = ({DATE, EXAME, SELECTED, HANDLE}) => {
           <div className='ChartDivisor'>
             <Chart CONTENT={CONTENT} RESUME={RESULTADO} />
           </div>
-          <div className='TableCpto'>
+        </div>
+        {showTable && (
+          <div className='TableCpto TableExame'>
             <div className='scrollable'>
               <div className='line header'>
                 <li>EXAME</li>
@@ -122,10 +132,10 @@ const ExameFinal = ({DATE, EXAME, SELECTED, HANDLE}) => {
                 <li>X4</li>
                 <li>X5</li>
               </div>
-              <Lines CONTENT={CONTENT} />
+              <Lines />
             </div>
           </div>
-        </div>
+        )}
       </div>
     </React.Fragment>
   )

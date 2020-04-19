@@ -5,7 +5,7 @@ const request = require('request-promise')
 const Model = require('./model')
 const domain = process.env.MIDDLEWR_URL
 const headers = {'Accept': 'application/json', 'Content-Type': 'application/json'}
-const exameNrmlzr = require('../normalizador/actions')
+const {exameNrmlzr} = require('../normalizador/actions')
 
 const parseFile = (path) => {
   return new Promise((resolve,reject)=> {

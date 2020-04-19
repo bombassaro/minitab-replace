@@ -3,412 +3,408 @@
     "INPUT": "ALONGAMENTO DM",
     "OUTPUT": "ALONGAMENTO DM"
   },
-  {
+  {  
     "INPUT": "ALONGAMENTO DT",
     "OUTPUT": "ALONGAMENTO DT"
   },
-  {
+  {  
     "INPUT": "BRILHO 45°",
     "OUTPUT": "BRILHO"
   },
-  {
-    "INPUT": "BRILHO 45",
-    "OUTPUT": "BRILHO"
-  },
-  {
+  {  
     "INPUT": "BRILHO MATTE",
     "OUTPUT": "BRILHO MATTE"
   },
-  {
-    "INPUT": "COF  NT/NT - EST.",
-    "OUTPUT": "COF NT-NT EST"
-  },
-  {
-    "INPUT": "COF CHA/CHA - DIN - 24H",
-    "OUTPUT": "COF T-T DIN"
-  },
-  {
-    "INPUT": "COF CHA/CHA - DIN.",
-    "OUTPUT": "COF T-T DIN"
-  },
-  {
-    "INPUT": "COF CHA/CHA - DIN. IMEDIATO",
-    "OUTPUT": "COF T-T DIN IMEDIATO"
-  },
-  {
-    "INPUT": "COF CHA/CHA - EST.",
-    "OUTPUT": "COF CHA-CHA - EST "
-  },
-  {
-    "INPUT": "COF CHA/CHA - EST. - IMEDIATO",
-    "OUTPUT": "COF CHA-CHA - EST IMEDIATO"
-  },
-  {
+  {  
     "INPUT": "COF CHA/CHA - EST. 24H",
     "OUTPUT": "COF CHA-CHA - EST"
   },
-  {
+  {  
+    "INPUT": "COF CHA/CHA - EST.",
+    "OUTPUT": "COF CHA-CHA - EST "
+  },
+  {  
+    "INPUT": "COF CHA/CHA - EST. - IMEDIATO",
+    "OUTPUT": "COF CHA-CHA - EST IMEDIATO"
+  },
+  {  
+    "INPUT": "COF CHA/CHA - DIN - 24H",
+    "OUTPUT": "COF CHA-CHA DIN"
+  },
+  {  
+    "INPUT": "COF CHA/CHA - DIN.",
+    "OUTPUT": "COF CHA-CHA DIN"
+  },
+  {  
+    "INPUT": "COF CHA/CHA - DIN. IMEDIATO",
+    "OUTPUT": "COF CHA-CHA DIN IMEDIATO"
+  },
+  {  
     "INPUT": "COF COR/COR - DIN.",
-    "OUTPUT": "COF T-T DIN"
+    "OUTPUT": "COF COR-COR DIN"
   },
-  {
+  {  
     "INPUT": "COF COR/COR - DIN. - 12H",
-    "OUTPUT": "COF T-T DIN"
+    "OUTPUT": "COF COR-COR DIN"
   },
-  {
+  {  
     "INPUT": "COF COR/COR - DIN. - 24H",
-    "OUTPUT": "COF T-T DIN"
+    "OUTPUT": "COF COR-COR DIN"
   },
-  {
-    "INPUT": "COF COR/COR - DIN. - IMEDIATO",
-    "OUTPUT": "COF T-T DIN IMEDIATO"
-  },
-  {
+  {  
     "INPUT": "COF COR/COR - DIN. 24H",
-    "OUTPUT": "COF T-T DIN"
+    "OUTPUT": "COF COR-COR DIN"
   },
-  {
-    "INPUT": "COF COR/COR - EST.",
-    "OUTPUT": "COF T-T EST"
-  },
-  {
-    "INPUT": "COF COR/COR - EST. - 24H",
-    "OUTPUT": "COF T-T EST"
-  },
-  {
-    "INPUT": "COF COR/COR - EST. - IMEDIATO",
-    "OUTPUT": "COF T-T EST IMEDIATO"
-  },
-  {
+  {  
     "INPUT": "COF COR/COR DIN 24H",
-    "OUTPUT": "COF T-T DIN"
+    "OUTPUT": "COF COR-COR DIN"
   },
-  {
+  {  
     "INPUT": "COF COR-COR - DIN. - 24H",
-    "OUTPUT": "COF T-T DIN"
+    "OUTPUT": "COF COR-COR DIN"
   },
-  {
-    "INPUT": "COF COR-COR DIN IMEDIATO",
-    "OUTPUT": "COF T-T DIN IMEDIATO"
-  },
-  {
-    "INPUT": "COF EXT/EXT DIN",
-    "OUTPUT": "COF EXT-EXT DIN"
-  },
-  {
-    "INPUT": "COF EXT/EXT DIN - 24H",
-    "OUTPUT": "COF EXT-EXT DIN"
-  },
-  {
-    "INPUT": "COF EXT/EXT DIN - IMEDIATO",
-    "OUTPUT": "COF EXT-EXT DIN IMEDIATO"
-  },
-  {
-    "INPUT": "COF EXT/EXT EST - 24H",
-    "OUTPUT": "COF EXT-EXT EST"
-  },
-  {
-    "INPUT": "COF EXT/EXT EST - IMEDIATO",
-    "OUTPUT": "COF EXT-EXT EST IMEDIATO"
-  },
-  {
-    "INPUT": "COF EXT/EXT EST.",
-    "OUTPUT": "COF EXT-EXT EST"
-  },
-  {
-    "INPUT": "COF EXT/M DIN.",
-    "OUTPUT": "COF EXT-M DIN"
-  },
-  {
-    "INPUT": "COF EXT/MET DIN. - 24HS",
-    "OUTPUT": "COF EXT-M DIN"
-  },
-  {
-    "INPUT": "COF EXT-EXT DIN 24H",
-    "OUTPUT": "COF EXT-EXT DIN"
-  },
-  {
-    "INPUT": "COF INT/INT - DIN.",
-    "OUTPUT": "COF INT-INT DIN"
-  },
-  {
-    "INPUT": "COF INT/INT - DIN. 24H",
-    "OUTPUT": "COF INT-INT DIN"
-  },
-  {
-    "INPUT": "COF INT/INT - DIN. IMEDIATO",
-    "OUTPUT": "COF INT-INT DIN IMEDIATO"
-  },
-  {
-    "INPUT": "COF INT/INT - EST.",
-    "OUTPUT": "COF INT-INT EST"
-  },
-  {
-    "INPUT": "COF INT/INT - EST. 24H",
-    "OUTPUT": "COF INT-INT EST"
-  },
-  {
-    "INPUT": "COF INT/INT - EST. IMEDIATO",
-    "OUTPUT": "COF INT-INT EST IMEDIATO"
-  },
-  {
-    "INPUT": "COF INT/INT DIN - IMEDIATO",
-    "OUTPUT": "COF INT-INT DIN IMEDIATO"
-  },
-  {
-    "INPUT": "COF INT/INT DIN. - 24HS",
-    "OUTPUT": "COF INT-INT DIN"
-  },
-  {
-    "INPUT": "COF INT/INT EST - IMEDIATO",
-    "OUTPUT": "COF INT-INT EST IMEDIATO"
-  },
-  {
-    "INPUT": "COF INT/INT EST. - 24HS",
-    "OUTPUT": "COF INT-INT EST"
-  },
-  {
-    "INPUT": "COF INT/M - DIN.",
-    "OUTPUT": "COF INT-M DIN"
-  },
-  {
-    "INPUT": "COF INT/MET DIN. - 24HS",
-    "OUTPUT": "COF INT-M DIN"
-  },
-  {
-    "INPUT": "COF INT-INT - DIN. IMEDIATO",
-    "OUTPUT": "COF INT-INT DIN IMEDIATO"
-  },
-  {
-    "INPUT": "COF NT/NT - DIN - 24H",
-    "OUTPUT": "COF NT-NT DIN"
-  },
-  {
-    "INPUT": "COF NT/NT - DIN.",
-    "OUTPUT": "COF NT-NT DIN"
-  },
-  {
-    "INPUT": "COF NT/NT - DIN. - 12H",
-    "OUTPUT": "COF NT-NT DIN"
-  },
-  {
-    "INPUT": "COF NT/NT - DIN. - 40°C",
-    "OUTPUT": "COF NT-NT DIN"
-  },
-  {
-    "INPUT": "COF NT/NT - DIN. - 60°C",
-    "OUTPUT": "COF NT-NT DIN"
-  },
-  {
-    "INPUT": "COF NT/NT - DIN. 24H",
-    "OUTPUT": "COF NT-NT DIN"
-  },
-  {
-    "INPUT": "COF NT/NT - DIN. IMEDIATO",
-    "OUTPUT": "COF NT-NT DIN IMEDIATO"
-  },
-  {
-    "INPUT": "COF NT/NT - EST. - 24H",
-    "OUTPUT": "COF NT-NT EST"
-  },
-  {
-    "INPUT": "COF NT/NT - EST. - 40°C",
-    "OUTPUT": "COF NT-NT EST"
-  },
-  {
-    "INPUT": "COF NT/NT - EST. IMEDIATO",
-    "OUTPUT": "COF NT-NT EST IMEDIATO"
-  },
-  {
-    "INPUT": "COF NT/NT DIN 24H DSM",
-    "OUTPUT": "COF NT-NT DIN"
-  },
-  {
-    "INPUT": "COF NT-NT DIN 24H",
-    "OUTPUT": "COF NT-NT DIN"
-  },
-  {
-    "INPUT": "COF NT-NT DIN IMEDIATO",
-    "OUTPUT": "COF NT-NT DIN IMEDIATO"
-  },
-  {
+  {  
     "INPUT": "COF T/T DIN 24H DSM",
-    "OUTPUT": "COF T-T DIN"
+    "OUTPUT": "COF COR-COR DIN"
   },
-  {
-    "INPUT": "COF T/T DIN IMEDIATO DSM",
-    "OUTPUT": "COF T-T DIN IMEDIATO"
-  },
-  {
-    "INPUT": "CORONA LM",
-    "OUTPUT": "TRATAMENTO SUPERFICIAL CORONA LM"
-  },
-  {
-    "INPUT": "CORONA LO",
-    "OUTPUT": "TRATAMENTO SUPERFICIAL CORONA LO"
-  },
-  {
-    "INPUT": "DENSIDADE",
-    "OUTPUT": "DENSIDADE"
-  },
-  {
-    "INPUT": "DENSIDADE ÓPTICA",
-    "OUTPUT": "DENSIDADE ÓPTICA"
-  },
-  {
-    "INPUT": "ESPESSURA",
-    "OUTPUT": "ESPESSURA"
-  },
-  {
-    "INPUT": "ESPESSURA CALCULADA",
-    "OUTPUT": "ESPESSURA"
-  },
-  {
-    "INPUT": "ESTABILIDADE DIMENSIONAL DM",
-    "OUTPUT": "ESTABILIDADE DIMENSIONAL DM"
-  },
-  {
-    "INPUT": "ESTABILIDADE DIMENSIONAL DT",
-    "OUTPUT": "ESTABILIDADE DIMENSIONAL DT"
-  },
-  {
-    "INPUT": "FORÇA DE SELAGEM CHA/CHA",
-    "OUTPUT": "FORÇA DE SELAGEM T-T"
-  },
-  {
-    "INPUT": "FORÇA DE SELAGEM COR/COR",
-    "OUTPUT": "FORÇA DE SELAGEM T-T"
-  },
-  {
-    "INPUT": "FORÇA DE SELAGEM EXT/EXT",
-    "OUTPUT": "FORÇA DE SELAGEM EXT-EXT"
-  },
-  {
-    "INPUT": "FORÇA DE SELAGEM INT/EXT",
-    "OUTPUT": "FORÇA DE SELAGEM INT-EXT"
-  },
-  {
-    "INPUT": "FORÇA DE SELAGEM INT/INT",
-    "OUTPUT": "FORÇA DE SELAGEM INT-INT"
-  },
-  {
-    "INPUT": "FORÇA DE SELAGEM NT - 85°C",
-    "OUTPUT": "FORÇA DE SELAGEM INT-INT"
-  },
-  {
-    "INPUT": "FORÇA DE SELAGEM NT/NT",
-    "OUTPUT": "FORÇA DE SELAGEM INT-INT"
-  },
-  {
-    "INPUT": "FORÇA DE SELAGEM NT/T",
-    "OUTPUT": "FORÇA DE SELAGEM INT-EXT"
-  },
-  {
-    "INPUT": "FORÇA DE TRAÇÃO DM",
-    "OUTPUT": "FORÇA DE TRAÇÃO DM"
-  },
-  {
-    "INPUT": "FORÇA DE TRAÇÃO DT",
-    "OUTPUT": "FORÇA DE TRAÇÃO DT"
-  },
-  {
-    "INPUT": "GRAMATURA",
-    "OUTPUT": "GRAMATURA"
-  },
-  {
-    "INPUT": "HAZE/DIFUSÃO",
-    "OUTPUT": "HAZE"
-  },
-  {
-    "INPUT": "MÓDULO ELÁSTICO DM",
-    "OUTPUT": "MÓDULO ELÁSTICO DM"
-  },
-  {
-    "INPUT": "MÓDULO ELÁSTICO DT",
-    "OUTPUT": "MÓDULO ELÁSTICO DT"
-  },
-  {
-    "INPUT": "MÓDULO SECANTE 2% DM",
-    "OUTPUT": "MÓDULO SECANTE 2% DM"
-  },
-  {
-    "INPUT": "MÓDULO SECANTE 2% DT",
-    "OUTPUT": "MÓDULO SECANTE 2% DT"
-  },
-  {
-    "INPUT": "RENDIMENTO",
-    "OUTPUT": "RENDIMENTO"
-  },
-  {
-    "INPUT": "TENSÃO SUPERF CHAMA PROD FINAL",
-    "OUTPUT": "TENSÃO SUPERFICIAL"
-  },
-  {
-    "INPUT": "TENSÃO SUPERF. COR PROD FINAL",
-    "OUTPUT": "TENSÃO SUPERFICIAL"
-  },
-  {
-    "INPUT": "TENSÃO SUPERFICIAL CHAMA LM",
-    "OUTPUT": "TRATAMENTO SUPERFICIAL CHAMA LM"
-  },
-  {
-    "INPUT": "TENSÃO SUPERFICIAL CHAMA LO",
-    "OUTPUT": "TRATAMENTO SUPERFICIAL CHAMA LO"
-  },
-  {
-    "INPUT": "TENSÃO SUPERFICIAL CORONA LM",
-    "OUTPUT": "TRATAMENTO SUPERFICIAL CORONA LM"
-  },
-  {
-    "INPUT": "TENSÃO SUPERFICIAL CORONA LO",
-    "OUTPUT": "TRATAMENTO SUPERFICIAL CORONA LO"
-  },
-  {
-    "INPUT": "TIS COR/COR",
-    "OUTPUT": "TIS T-T"
-  },
-  {
-    "INPUT": "TIS EXT/EXT",
-    "OUTPUT": "TIS EXT-EXT"
-  },
-  {
-    "INPUT": "TIS INT/INT",
-    "OUTPUT": "TIS INT-INT"
-  },
-  {
-    "INPUT": "TIS NT/NT",
-    "OUTPUT": "TIS NT-NT"
-  },
-  {
-    "INPUT": "TIS NT/T",
-    "OUTPUT": "TIS NT-T"
-  },
-  {
-    "INPUT": "TPO2",
-    "OUTPUT": "TPO2"
-  },
-  {
-    "INPUT": "TPVA",
-    "OUTPUT": "TPVA"
-  },
-  {
-    "INPUT": "TRANSMITÂNCIA",
-    "OUTPUT": "HAZE"
-  },
-  {
-    "INPUT": "TRATAMENTO SUPERFICIAL CHAMA",
-    "OUTPUT": "TENSÃO SUPERFICIAL"
-  },
-  {
-    "INPUT": "TRATAMENTO SUPERFICIAL CORONA",
-    "OUTPUT": "TENSÃO SUPERFICIAL"
-  },
-  {
+  {  
     "INPUT": "COF COR-COR DIN 24H",
     "OUTPUT": "COF COR-COR DIN"
   },
-  {
+  {  
+    "INPUT": "COF COR/COR - DIN. - IMEDIATO",
+    "OUTPUT": "COF COR-COR DIN IMEDIATO"
+  },
+  {  
+    "INPUT": "COF COR-COR DIN IMEDIATO",
+    "OUTPUT": "COF COR-COR DIN IMEDIATO"
+  },
+  {  
+    "INPUT": "COF T/T DIN IMEDIATO DSM",
+    "OUTPUT": "COF COR-COR DIN IMEDIATO"
+  },
+  {  
+    "INPUT": "COF COR/COR - EST.",
+    "OUTPUT": "COF COR-COR EST"
+  },
+  {  
+    "INPUT": "COF COR/COR - EST. - 24H",
+    "OUTPUT": "COF COR-COR EST"
+  },
+  {  
+    "INPUT": "COF COR/COR - EST. - IMEDIATO",
+    "OUTPUT": "COF COR-COR EST IMEDIATO"
+  },
+  {  
+    "INPUT": "COF EXT/EXT DIN",
+    "OUTPUT": "COF EXT-EXT DIN"
+  },
+  {  
+    "INPUT": "COF EXT/EXT DIN - 24H",
+    "OUTPUT": "COF EXT-EXT DIN"
+  },
+  {  
+    "INPUT": "COF EXT-EXT DIN 24H",
+    "OUTPUT": "COF EXT-EXT DIN"
+  },
+  {  
+    "INPUT": "COF EXT/EXT DIN - IMEDIATO",
+    "OUTPUT": "COF EXT-EXT DIN IMEDIATO"
+  },
+  {  
+    "INPUT": "COF EXT/EXT EST - 24H",
+    "OUTPUT": "COF EXT-EXT EST"
+  },
+  {  
+    "INPUT": "COF EXT/EXT EST.",
+    "OUTPUT": "COF EXT-EXT EST"
+  },
+  {  
+    "INPUT": "COF EXT/EXT EST - IMEDIATO",
+    "OUTPUT": "COF EXT-EXT EST IMEDIATO"
+  },
+  {  
+    "INPUT": "COF EXT/M DIN.",
+    "OUTPUT": "COF EXT-M DIN"
+  },
+  {  
+    "INPUT": "COF EXT/MET DIN. - 24HS",
+    "OUTPUT": "COF EXT-M DIN"
+  },
+  {  
+    "INPUT": "COF INT/INT - DIN.",
+    "OUTPUT": "COF INT-INT DIN"
+  },
+  {  
+    "INPUT": "COF INT/INT - DIN. 24H",
+    "OUTPUT": "COF INT-INT DIN"
+  },
+  {  
+    "INPUT": "COF INT/INT DIN. - 24HS",
+    "OUTPUT": "COF INT-INT DIN"
+  },
+  {  
+    "INPUT": "COF INT/INT - DIN. IMEDIATO",
+    "OUTPUT": "COF INT-INT DIN IMEDIATO"
+  },
+  {  
+    "INPUT": "COF INT/INT DIN - IMEDIATO",
+    "OUTPUT": "COF INT-INT DIN IMEDIATO"
+  },
+  {  
+    "INPUT": "COF INT-INT - DIN. IMEDIATO",
+    "OUTPUT": "COF INT-INT DIN IMEDIATO"
+  },
+  {  
+    "INPUT": "COF INT/INT - EST.",
+    "OUTPUT": "COF INT-INT EST"
+  },
+  {  
+    "INPUT": "COF INT/INT - EST. 24H",
+    "OUTPUT": "COF INT-INT EST"
+  },
+  {  
+    "INPUT": "COF INT/INT EST. - 24HS",
+    "OUTPUT": "COF INT-INT EST"
+  },
+  {  
+    "INPUT": "COF INT/INT - EST. IMEDIATO",
+    "OUTPUT": "COF INT-INT EST IMEDIATO"
+  },
+  {  
+    "INPUT": "COF INT/INT EST - IMEDIATO",
+    "OUTPUT": "COF INT-INT EST IMEDIATO"
+  },
+  {  
+    "INPUT": "COF INT/M - DIN.",
+    "OUTPUT": "COF INT-M DIN"
+  },
+  {  
+    "INPUT": "COF INT/MET DIN. - 24HS",
+    "OUTPUT": "COF INT-M DIN"
+  },
+  {  
+    "INPUT": "COF NT/NT - DIN - 24H",
+    "OUTPUT": "COF NT-NT DIN"
+  },
+  {  
+    "INPUT": "COF NT/NT - DIN.",
+    "OUTPUT": "COF NT-NT DIN"
+  },
+  {  
+    "INPUT": "COF NT/NT - DIN. - 12H",
+    "OUTPUT": "COF NT-NT DIN"
+  },
+  {  
+    "INPUT": "COF NT/NT - DIN. - 40°C",
+    "OUTPUT": "COF NT-NT DIN"
+  },
+  {  
+    "INPUT": "COF NT/NT - DIN. - 60°C",
+    "OUTPUT": "COF NT-NT DIN"
+  },
+  {  
+    "INPUT": "COF NT/NT - DIN. 24H",
+    "OUTPUT": "COF NT-NT DIN"
+  },
+  {  
+    "INPUT": "COF NT/NT DIN 24H DSM",
+    "OUTPUT": "COF NT-NT DIN"
+  },
+  {  
     "INPUT": "COF NT-NT DIN 24H",
     "OUTPUT": "COF NT-NT DIN"
+  },
+  {  
+    "INPUT": "COF NT-NT DIN 24H",
+    "OUTPUT": "COF NT-NT DIN"
+  },
+  {  
+    "INPUT": "COF NT/NT - DIN. IMEDIATO",
+    "OUTPUT": "COF NT-NT DIN IMEDIATO"
+  },
+  {  
+    "INPUT": "COF NT-NT DIN IMEDIATO",
+    "OUTPUT": "COF NT-NT DIN IMEDIATO"
+  },
+  {  
+    "INPUT": "COF  NT/NT - EST.",
+    "OUTPUT": "COF NT-NT EST"
+  },
+  {  
+    "INPUT": "COF NT/NT - EST. - 24H",
+    "OUTPUT": "COF NT-NT EST"
+  },
+  {  
+    "INPUT": "COF NT/NT - EST. - 40°C",
+    "OUTPUT": "COF NT-NT EST"
+  },
+  {  
+    "INPUT": "COF NT/NT - EST. IMEDIATO",
+    "OUTPUT": "COF NT-NT EST IMEDIATO"
+  },
+  {  
+    "INPUT": "DENSIDADE",
+    "OUTPUT": "DENSIDADE"
+  },
+  {  
+    "INPUT": "DENSIDADE ÓPTICA",
+    "OUTPUT": "DENSIDADE ÓPTICA"
+  },
+  {  
+    "INPUT": "ESPESSURA",
+    "OUTPUT": "ESPESSURA"
+  },
+  {  
+    "INPUT": "ESPESSURA CALCULADA",
+    "OUTPUT": "ESPESSURA"
+  },
+  {  
+    "INPUT": "ESTABILIDADE DIMENSIONAL DM",
+    "OUTPUT": "ESTABILIDADE DIMENSIONAL DM"
+  },
+  {  
+    "INPUT": "ESTABILIDADE DIMENSIONAL DT",
+    "OUTPUT": "ESTABILIDADE DIMENSIONAL DT"
+  },
+  {  
+    "INPUT": "FORÇA DE SELAGEM EXT/EXT",
+    "OUTPUT": "FORÇA DE SELAGEM EXT-EXT"
+  },
+  {  
+    "INPUT": "FORÇA DE SELAGEM INT/EXT",
+    "OUTPUT": "FORÇA DE SELAGEM INT-EXT"
+  },
+  {  
+    "INPUT": "FORÇA DE SELAGEM NT/T",
+    "OUTPUT": "FORÇA DE SELAGEM INT-EXT"
+  },
+  {  
+    "INPUT": "FORÇA DE SELAGEM INT/INT",
+    "OUTPUT": "FORÇA DE SELAGEM INT-INT"
+  },
+  {  
+    "INPUT": "FORÇA DE SELAGEM NT - 85°C",
+    "OUTPUT": "FORÇA DE SELAGEM INT-INT"
+  },
+  {  
+    "INPUT": "FORÇA DE SELAGEM NT/NT",
+    "OUTPUT": "FORÇA DE SELAGEM INT-INT"
+  },
+  {  
+    "INPUT": "FORÇA DE SELAGEM CHA/CHA",
+    "OUTPUT": "FORÇA DE SELAGEM T-T"
+  },
+  {  
+    "INPUT": "FORÇA DE SELAGEM COR/COR",
+    "OUTPUT": "FORÇA DE SELAGEM T-T"
+  },
+  {  
+    "INPUT": "FORÇA DE TRAÇÃO DM",
+    "OUTPUT": "FORÇA DE TRAÇÃO DM"
+  },
+  {  
+    "INPUT": "FORÇA DE TRAÇÃO DT",
+    "OUTPUT": "FORÇA DE TRAÇÃO DT"
+  },
+  {  
+    "INPUT": "GRAMATURA",
+    "OUTPUT": "GRAMATURA"
+  },
+  {  
+    "INPUT": "HAZE/DIFUSÃO",
+    "OUTPUT": "HAZE"
+  },
+  {  
+    "INPUT": "MÓDULO ELÁSTICO DM",
+    "OUTPUT": "MÓDULO ELÁSTICO DM"
+  },
+  {  
+    "INPUT": "MÓDULO ELÁSTICO DT",
+    "OUTPUT": "MÓDULO ELÁSTICO DT"
+  },
+  {  
+    "INPUT": "MÓDULO SECANTE 2% DM",
+    "OUTPUT": "MÓDULO SECANTE 2% DM"
+  },
+  {  
+    "INPUT": "MÓDULO SECANTE 2% DT",
+    "OUTPUT": "MÓDULO SECANTE 2% DT"
+  },
+  {  
+    "INPUT": "TRANSMITÂNCIA",
+    "OUTPUT": "OPACIDADE"
+  },
+  {  
+    "INPUT": "RENDIMENTO",
+    "OUTPUT": "RENDIMENTO"
+  },
+  {  
+    "INPUT": "TENSÃO SUPERF CHAMA PROD FINAL",
+    "OUTPUT": "TENSÃO SUPERFICIAL"
+  },
+  {  
+    "INPUT": "TENSÃO SUPERF. COR PROD FINAL",
+    "OUTPUT": "TENSÃO SUPERFICIAL"
+  },
+  {  
+    "INPUT": "TRATAMENTO SUPERFICIAL CHAMA",
+    "OUTPUT": "TENSÃO SUPERFICIAL"
+  },
+  {  
+    "INPUT": "TRATAMENTO SUPERFICIAL CORONA",
+    "OUTPUT": "TENSÃO SUPERFICIAL"
+  },
+  {  
+    "INPUT": "TIS EXT/EXT",
+    "OUTPUT": "TIS EXT-EXT"
+  },
+  {  
+    "INPUT": "TIS INT/INT",
+    "OUTPUT": "TIS INT-INT"
+  },
+  {  
+    "INPUT": "TIS NT/NT",
+    "OUTPUT": "TIS NT-NT"
+  },
+  {  
+    "INPUT": "TIS NT/T",
+    "OUTPUT": "TIS NT-T"
+  },
+  {  
+    "INPUT": "TIS COR/COR",
+    "OUTPUT": "TIS T-T"
+  },
+  {  
+    "INPUT": "TPO2",
+    "OUTPUT": "TPO2"
+  },
+  {  
+    "INPUT": "TPVA",
+    "OUTPUT": "TPVA"
+  },
+  {  
+    "INPUT": "TENSÃO SUPERFICIAL CHAMA LM",
+    "OUTPUT": "TRATAMENTO SUPERFICIAL CHAMA LM"
+  },
+  {  
+    "INPUT": "TENSÃO SUPERFICIAL CHAMA LO",
+    "OUTPUT": "TRATAMENTO SUPERFICIAL CHAMA LO"
+  },
+  {  
+    "INPUT": "CORONA LM",
+    "OUTPUT": "TRATAMENTO SUPERFICIAL CORONA LM"
+  },
+  {  
+    "INPUT": "TENSÃO SUPERFICIAL CORONA LM",
+    "OUTPUT": "TRATAMENTO SUPERFICIAL CORONA LM"
+  },
+  {  
+    "INPUT": "CORONA LO",
+    "OUTPUT": "TRATAMENTO SUPERFICIAL CORONA LO"
+  },
+  {  
+    "INPUT": "TENSÃO SUPERFICIAL CORONA LO",
+    "OUTPUT": "TRATAMENTO SUPERFICIAL CORONA LO"
   }
 ]

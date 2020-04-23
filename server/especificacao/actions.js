@@ -7,13 +7,16 @@ const domain = process.env.MIDDLEWR_URL
 const headers = {'Accept': 'application/json', 'Content-Type': 'application/json'}
 const {exameNrmlzr} = require('../normalizador/actions')
 
+
 const parseFile = (path) => {
   return new Promise((resolve,reject)=> {
     const results = []
-    fs.createReadStream(path)
-      .pipe(csv())
-      .on('data', (data) => results.push(data))
-      .on('end', () => resolve(results))
+    fs.createReadStream(path, {
+      encoding: 'latin1'
+    })
+    .pipe(csv({separator: '\t'}))
+    .on('data', (data) => results.push(data))
+    .on('end', () => resolve(results))
   })
 }
 const parseData = (result) => {

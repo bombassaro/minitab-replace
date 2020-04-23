@@ -1,7 +1,5 @@
 const request = require('request-promise')
 const csv = require('csv-parser')
-const stripBom = require('strip-bom-stream');
-// 
 const getTime = require('date-fns/getTime')
 const {map} = require('lodash')
 const fs = require('fs')
@@ -40,7 +38,6 @@ const parseFile = (path) => {
     })
     .pipe(csv({separator: '\t'}))
     .on('data', (data) => {
-      console.log(`data`, data)
       results.push(data)
     })
     .on('end', () => resolve(results))

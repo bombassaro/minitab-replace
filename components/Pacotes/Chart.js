@@ -60,11 +60,28 @@ const Chart = ({CONTENT, RESUME}) => {
     return <circle r="3" stroke={colorBlue} fill={colorBlue} stroke-width="1" width="530" height="260" class="recharts-dot recharts-line-dot" cx={cx} cy={cy}></circle>
   }
 
+  const CustomizedAxisTick = ({x, y, stroke, payload}) => {
+    const split = payload.value.split("/")
+    const formatted = `${split[0]}/${split[2].substr(2, 4)}`
+    return (
+      <g transform={`translate(${x},${y})`}>
+        <text x={0} y={0} dy={16} textAnchor="end" fill="#666" transform="rotate(-35)">{formatted}</text>
+      </g>
+    )
+  }
+  const CustomizedAyisTick = ({x, y, stroke, payload}) => {
+    const formatted = parseFloat(payload.value)
+    return (
+      <g transform={`translate(${x},${y})`}>
+        <text x={60} y={0} dy={16} textAnchor="end" fill="#666">{formatted.toFixed(4)}</text>
+      </g>
+    )
+  }
   return (
     <LineChart width={width} height={height} data={CHART_DATA}>
-      <CartesianGrid strokeDasharray="3 3"/>
-      <XAxis dataKey="ITEM"/>
-      <YAxis orientation={`right`} domain={DOMINIO} />
+      <CartesianGrid strokeDasharray="3 3" />
+      <XAxis dataKey="DATA" height={50} tick={<CustomizedAxisTick/>} />
+      <YAxis orientation={`right`} domain={DOMINIO} tick={<CustomizedAyisTick />} width={70} />
       <Tooltip/>
       <Line 
         dot={null}

@@ -1,15 +1,19 @@
 import React from 'react'
 import {map, pull} from 'lodash'
 import ExameFinal from './Exame'
-import Relatorio from './Relatorio'
+import RelatAcomp from './RelatAcomp'
+import RelatEstat from './RelatEstat'
 import {doReport} from '../../service/actions'
 
 export default ({children, filters, forceUpdate}) => {
   const {DATE, EXAMES, FILMES, LINHAS} = filters
   const [LOADING, setLoading] = React.useState(true)
-  const [SELECTED, setSelected] = React.useState({EXAME: [], FILME: [], LINHA: []})
+  const [SELECTED, setSelected] = React.useState({EXAME: ["BRILHO", "GRAMATURA", "HAZE"], FILME: ["20TSY32MR-L2"], LINHA: [2]})
   const [UPDATED, setUpdated] = React.useState(false)
   const [RESULTADO, setResultado] = React.useState({})
+  const setTestDefault = () => {
+    setSelected({EXAME: ["BRILHO"], FILME: ["15TSY32MR"], LINHA: [1]})
+  }
   const handleChange = (value, group) => {
     const payload = SELECTED
     const reset = () => {
@@ -95,7 +99,8 @@ export default ({children, filters, forceUpdate}) => {
       {LOADING ? 
         <div className='GroupExameFinal'><pre>Loading</pre></div> : (
         <React.Fragment>
-          <Relatorio RESULTADO={RESULTADO} />
+          <RelatAcomp RESULTADO={RESULTADO} />
+          <RelatEstat RESULTADO={RESULTADO} />
           <RenderExames />
         </React.Fragment>
       )}

@@ -11,7 +11,7 @@ import Filters from './Filters'
 
 export default () => {
   const dateStart = format(subWeeks(new Date(2020, 0, 1), 2), 'dd/MM/yyyy') 
-  const dateEnd = format(new Date(2020, 0, 2), 'dd/MM/yyyy') 
+  const dateEnd = format(new Date(2020, 1, 2), 'dd/MM/yyyy') 
   const [inited, setInited] = React.useState(false)
   const [DTFLTRS, setDtFltrS] = React.useState(dateStart)
   const [DTFLTRE, setDtFltrE] = React.useState(dateEnd)

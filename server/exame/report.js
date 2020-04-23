@@ -72,7 +72,8 @@ const calcDesvioPadrao = ({result, specs, somas}) => {
     let DESVIO_PADRAO = (Math.sqrt(DESVIO_SOMA / (TOTAL_ITEMS - 1)))
     // console.log(`DESVIO_PADRAO`, DESVIO_PADRAO)
     let DESVIO_DENTRO = (DESVIO_RANGE / (TOTAL_ITEMS - 2 + 1)) / 1.128
-    //
+    // let DPS = DESVIO_DENTRO
+    // let DPL = 
 
     let CORTE_MENOR = MEDIA_GERAL - (2 * DESVIO_PADRAO)
     let CORTE_MAIOR = MEDIA_GERAL + (2 * DESVIO_PADRAO)

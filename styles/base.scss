@@ -1,0 +1,430 @@
+@use 'index.scss' as *;
+
+// @import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap');
+// // tokens
+// $font-primary: 'Share Tech Mono', monospace;
+// $font-secondary: 'Share Tech Mono', monospace;
+// $font-tertiary: 'Share Tech Mono', monospace;
+// // extends
+// // ordinaries
+
+body {
+  @include h(100vh);
+  & > div {
+    @include bg($color-gray-10);
+    @include fy(center, center);
+    @include h(100%);
+    @include p(0px);
+    @include m(0px);
+    @include w(100%);
+  }
+}
+
+.panel-body {
+  &.dialog {
+    @include mw(300px);
+  }
+}
+
+// * {
+// 	@include m(0px);
+// 	@include p(0px);
+// 	@include fs(14px);
+// }
+// html, body {
+// 	@include area(100%);
+// 	@include ff($font-primary);
+// }
+// a {
+//   text-decoration: none;
+// }
+select {
+	@include p(5px);
+	@include w(100%);
+	option {
+		@include p(5px);
+		@include mb(5px);
+		cursor: pointer;
+	}
+}
+input {
+	@include p(5px);
+	@include mb(10px);
+}
+ul {
+	@include b(1px, solid, rgba(0,0,0,0.2));
+	@include m(0px);
+	@include p(0px);
+	overflow-y: scroll;
+}
+li {
+	@include fx(center, flex-start);
+	@include p(5px);
+	@include m(0px);
+	cursor: pointer;
+	&.selected {
+		@include bg(rgba(0,0,0,0.15));
+	}
+}
+i.material-icons {
+	@include fs(14px);
+	@include mr(5px);
+}
+.MainContainer {
+	@include fx(center, flex-start);
+	@include jc(flex-start);
+	// @include p(20px);
+	@include h(100vh);
+	@include w(100vw);
+	position: fixed;
+}
+.MainPacotes {
+	@include bg(rgba(0,0,0,0.1));
+	@include fy(center, flex-start);
+	@include h(calc(100% - 80px));
+	@include mt(80px);
+	@include w(100%);
+	select {
+		@include fs(12px);
+	}
+	overflow-y: scroll;
+}
+.MainTopbar {
+	@include bb(4px, solid, rgba(255, 255, 255, 0.2));
+	@include bg(rgb(38, 31, 136));
+	@include fy(center, center);
+	@include h(80px);
+	@include w(100%);
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	z-index: 4;
+	.Wrap {
+		@include fx(center, center);
+		@include jc(space-between);
+		@include h(100%);
+		@include mw(920px);
+		@include w(100%);
+		& > div {
+			@include fy(center, flex-start);
+			@include w(calc(100% / 3));
+			&:last-child {
+				@include fy(center, flex-end);
+			}
+			.title {
+				@include fc(white);
+				@include fs(32px);
+				@include fw(bold);
+				@include pt(4px);
+				cursor: pointer;
+			}
+			&.leftButton {
+				@include fx(center, center);
+				@include jc(flex-start);
+				cursor: pointer;
+				i {
+					@include fc(white);
+					@include fs(32px);
+					@include fw(bold);
+					@include pt(4px);
+					@include mr(20px);
+					// @include pt(14px);
+				}
+			}
+			&.rightWrap {
+				@include fx(center, center);
+				@include jc(flex-end);
+				.rightButton {
+					@include fx(center, center);
+					@include jc(flex-end);
+					@include ml(20px);
+					cursor: pointer;
+				}
+				.filter {
+					@include fc(white);
+					@include fs(16px);
+					// @include fw(bold);
+					@include pt(4px);
+				}
+				i {
+					@include fc(white);
+					@include fs(20px);
+					// @include fw(bold);
+					@include pt(4px);
+					@include ml(10px);
+					// @include pt(14px);
+				}
+			}
+		}
+	}
+}
+.MainBody {
+	@include bg(white);
+	@include bl(1px, solid, rgba(0,0,0,0.2));
+	@include br(1px, solid, rgba(0,0,0,0.2));
+	@include px(40px);
+	@include py(40px);
+	// @include mt(100px);
+	// @include pb(200px);
+	// @include h(calc(100vh - 100px));
+	@include mw(800px);
+	@include w(100%);
+}
+.ChartDivisor {
+	@include fy(center, center);
+	@include w(100%);
+}
+.MainFilter {
+	@include fy(center, center);
+	@include bg(rgba(0,0,0,0.7));
+	// @include p(20px);
+	@include h(100vh);
+	@include w(100vw);
+	overflow-y: scroll;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 2;
+	display: none;
+	&.opened {
+		display: flex;
+	}
+	.Wrap {
+		@include b(1px, solid, rgba(0,0,0,0.2));
+		@include bg(white);
+		@include fx(flex-start, flex-start);
+		@include jc(space-between);
+		@include h(50vh);
+		@include mt(120px);
+		@include mw(920px);
+		@include w(100%);
+	}
+	.FieldSearch {
+		@include m(20px);
+		@include w(calc(100% / 3));
+		ul {
+			@include w(100%);
+		}
+		&.Filmes ul {
+			@include h(400px);
+		}
+		&.Linhas ul {
+			@include h(100px);
+		}
+		&.Exames ul {
+			@include h(400px);
+		}
+		&.Importar {
+			cursor: pointer;
+		}
+	}
+	.Pacotes {
+		@include mb(20px);
+	}
+}
+.GroupExameFinal {
+	@include fy(center, flex-start);
+	// @include mr(20px);
+	@include mt(20px);
+	// @include ml(320px);
+	h3 {
+		@include fs(18px);
+		@include fx(flex-start, space-between);
+		@include my(10px);
+		@include w(100%);
+		span {
+			cursor: pointer;
+			@include fs(14px);
+		}
+	}
+	.Card {
+		// @include b(1px, solid, rgba(0,0,0,0.15));
+		// @include bg(rgba(0,0,0,0.05));
+		@include fy(center, flex-start);
+		// @include p(20px);
+		@include w(100%);
+	}
+	.header_line {
+		@include fx(center, center);
+		@include jc(space-between);
+		@include pb(10px);
+		@include w(100%);
+		h3 {
+			@include fs(24px);
+		}
+	}
+}
+.CalcularBox {
+	@include ml(20px);
+	ul {
+		@include h(333px);
+		@include my(10px);
+	}
+}
+.ResultadosBox {
+	@include bt(1px, solid, rgba(0,0,0,0.1));
+	@include py(20px);
+	@include w(100%);
+	ul {
+		@include w(100%);
+		border: none;
+		display: flex;
+		flex-wrap: wrap;
+		li {
+			@include b(1px, solid, rgba(0,0,0,0.1));
+			@include bg(rgba(0,0,0,0.03));
+			@include fx(center, center);
+			@include jc(space-between);
+			@include p(0px);
+			@include px(10px);
+			@include r(5px);
+			@include mx(4px);
+			@include mb(8px);
+			@include w(calc(calc(100% / 4) - 30px));
+			// @media(min-width: 720px) {
+				// @include w(calc(calc(100% / 3) - 30px));
+			// }
+			span {
+				@include py(4px);
+			}
+			.label {
+				// @include pb(5px);
+				// @include pt(10px);
+			}
+			.value {
+				// @include pt(5px);
+				// @include pb(8px);
+			}
+			&:hover {
+				@include bg(rgba(0,0,0,0.06));
+			}
+		}
+	}
+}
+.ButtonCalculate {
+	@include fx(center, center);
+	@include jc(center);
+	@include b(1px, solid, rgba(0,0,0,0.3));
+	@include bg(rgba(0,0,0,0.1));
+	@include h(35px);
+	@include w(85px);
+	cursor: pointer;
+	p {
+		@include fc(rgba(0,0,0,1));
+		@include ta(center);
+	}
+	&:hover {
+		@include bg(rgba(0,0,0,0.2));
+	}
+}
+.loading {
+	.ResultadosBox {
+		ul {
+			@include bg(rgba(0,0,0,0.1));
+		}
+	}
+	.FieldSearch {
+		ul {
+			@include bg(rgba(0,0,0,0.1));
+		}
+	}
+}
+.TableCpto {
+	// @include b(1px, solid, rgba(0,0,0,0.15));
+	// @include bg(rgba(0,0,0,0.05));
+	@include bt(1px, solid, rgba(0,0,0,0.1));
+	@include fx(center, flex-start);
+	@include py(20px);
+	// @include mw(900px);
+	@include w(100%);
+	.scrollable {
+		@include pb(20px);
+		// @include h(400px);
+		// @include bg(rgba(0,0,0,0.05));
+		@include w(100%);
+		overflow-x: scroll;
+		overflow-y: scroll;
+	}
+	.line {
+		display: inline-flex;
+		li {
+			@include fw(normal);
+			@include fc(rgba(0,0,0,0.7));
+			@include ta(right);
+			@include w(70px);
+			display: block;
+		}
+		&.item:hover {
+			@include bg(rgba(0,0,0,0.05));
+		}
+		&.header {
+			@include pb(10px);
+			li {
+				@include fc(rgba(0,0,0,1));
+				@include fw(bold);
+			}
+		}
+		&.red {
+			@include fc(red);
+		}
+	}
+	&.TableReport {
+		li:nth-child(1),
+		li:nth-child(2) {
+			@include ta(left);
+			@include w(160px);
+		}
+		li:nth-child(3) {
+			@include w(50px);
+		}
+	}
+	&.TableExame {
+		li:nth-child(1) {
+			@include ta(left);
+			@include w(60px);
+		}
+		li:nth-child(2),
+		li:nth-child(3) {
+			@include ta(left);
+			@include w(160px);
+		}
+		li:nth-child(10) {
+			@include w(100px);
+		}
+	}
+}
+.chart-media-dot {
+	@include area(10px);
+	@include bg(rgba(0,0,0,0.05));
+}
+.PageImport {
+	@include fx(flex-start, flex-start);
+	@include jc(space-between);
+	@include h(calc(100% - 20px));
+	@include py(10px);
+	@include w(100%);
+	.left-side {
+		@include w(30%);
+	}
+	.right-side {
+		@include bl(1px, solid, rgba(0,0,0,0.1));
+		@include h(100%);
+		@include w(70%);
+		overflow-y: scroll;
+		li {
+			@include pb(10px);
+			@include px(0px);
+		}
+	}
+	.PacoteFilters {
+		@include px(20px);
+		@include w(calc(100% - 40px));
+	}
+	.Label {
+		@include mb(10px);
+	}
+	.Warning {
+		@include mt(10px);
+		@include fc(#999);
+	}
+}

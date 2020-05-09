@@ -1,5 +1,3 @@
-const withCSS = require('@zeit/next-css')
-const withSASS = require('@zeit/next-sass')
 const nextConfig = {
   experimental: {
     publicDirectory: true
@@ -36,4 +34,4 @@ const nextConfig = {
     return config;
   }
 }
-module.exports = withCSS(withSASS(nextConfig))
+module.exports = nextConfig

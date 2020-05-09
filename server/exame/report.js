@@ -112,12 +112,19 @@ const calcCpCpk = (resume) => {
     cpcpk.PP = !MAX || !MIN ? null : ((MAX - MIN) / (6 * DESVIO_PADRAO)) // TODO
     cpcpk.PPK1 = !MAX ? null : ((MAX - MEDIA_GERAL) / (3 * DESVIO_PADRAO)) // TODO
     cpcpk.PPK2 = !MIN ? null : ((MEDIA_GERAL - MIN) / (3 * DESVIO_PADRAO)) // TODO
-    cpcpk.PPK = cpcpk.PPK1 > cpcpk.PPK2 ? cpcpk.PPK2 : cpcpk.PPK1 // TODO
+    cpcpk.PPK = !cpcpk.PPK2 ||
+    (cpcpk.PPK2 > cpcpk.PPK1) ?
+      cpcpk.PPK1 : 
+        cpcpk.PPK2
     //
     cpcpk.CP = !MAX || !MIN ? null : ((MAX - MIN) / (6 * DESVIO_DENTRO)) // TODO
     cpcpk.CPK1 = !MAX ? null : ((MAX - MEDIA_GERAL) / (3 * DESVIO_DENTRO)) // TODO
     cpcpk.CPK2 = !MIN ? null : ((MEDIA_GERAL - MIN) / (3 * DESVIO_DENTRO)) // TODO
-    cpcpk.CPK = cpcpk.CPK1 > cpcpk.CPK2 ? cpcpk.CPK2 : cpcpk.CPK1 // TODO
+    cpcpk.CPK = !cpcpk.CPK2 ||
+      (cpcpk.CPK2 > cpcpk.CPK1) ?
+        cpcpk.CPK1 : 
+          cpcpk.CPK2 
+
     return resolve(cpcpk)
   })
 }

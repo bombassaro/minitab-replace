@@ -47,21 +47,24 @@ export default () => {
   })
   return (
     <div className="PageImport">
-      <div className='FieldSearch Importar'>
-        <h3>IMPORTAR</h3>
+      <div className={`left-side`}>
+        <div className='FieldSearch Importar'>
+          <h3>IMPORTAR</h3>
+        </div>
+        <div className="PacoteFilters">
+          <p className="Label">Selecionar arquivo</p>
+          <input type="file" onChange={handleUpload} />
+          <div onClick={() => handleClick()}>ENVIAR</div>
+          {loading ? <p className="Warning">Carregando...</p> : ``}
+        </div>
       </div>
-      <p className="Label">Selecionar arquivo</p>
-      <input type="file" onChange={handleUpload} />
-      <div onClick={() => handleClick()}>ENVIAR</div>
-      {loading ? <p className="Warning">Carregando...</p> : ``}
-      <br />
-      <br />
-      <br />
-      <div className='FieldSearch Importar'>
-        <h3>PACOTES</h3>
-      </div>
-      <div className="PacoteFilters">
-        <PacoteItems />
+      <div className={`right-side`}>
+        <div className='FieldSearch Importar'>
+          <h3>PACOTES</h3>
+        </div>
+        <div className="PacoteFilters">
+          <PacoteItems />
+        </div>
       </div>
     </div>
   )

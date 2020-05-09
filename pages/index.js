@@ -1,8 +1,2 @@
-import Container from '../components/Container'
-import Pacotes from '../components/Pacotes'
-
-export default () => (
-  <Container>
-    <Pacotes />
-  </Container>
-)
+import Home from '../components/Home'
+export default () => <Home />

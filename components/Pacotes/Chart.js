@@ -9,6 +9,7 @@ import {
   XAxis, 
   YAxis, 
   CartesianGrid, 
+  ResponsiveContainer,
   Tooltip} from 'recharts'
 
 import {map} from 'lodash'
@@ -73,76 +74,78 @@ const Chart = ({CONTENT, RESUME}) => {
     const formatted = parseFloat(payload.value)
     return (
       <g transform={`translate(${x},${y})`}>
-        <text x={60} y={0} dy={16} textAnchor="end" fill="#666">{formatted.toFixed(4)}</text>
+        <text x={75} y={0} dy={16} textAnchor="end" fill="#666">{formatted.toFixed(4)}</text>
       </g>
     )
   }
   return (
-    <LineChart width={width} height={height} data={CHART_DATA}>
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="DATA" height={50} tick={<CustomizedAxisTick/>} />
-      <YAxis orientation={`right`} domain={DOMINIO} tick={<CustomizedAyisTick />} width={70} />
-      <Tooltip/>
-      <Line 
-        dot={null}
-        type="linear"
-        dataKey="MEDIA_GERAL" 
-        stroke={colorGreen} 
-        fill={colorGreen} 
-        isAnimationActive={false} 
-      />
-      <Line 
-        dot={null}
-        type="linear"
-        dataKey="SPECS_MIN" 
-        strokeDasharray="5 5"
-        stroke={colorRed} 
-        fill={colorRed} 
-        isAnimationActive={false} 
-      />
-      <Line 
-        dot={null}
-        type="linear"
-        dataKey="SPECS_MAX" 
-        strokeDasharray="5 5"
-        stroke={colorRed} 
-        fill={colorRed} 
-        isAnimationActive={false} 
-      />
-      <Line 
-        dot={null}
-        type="linear"
-        dataKey="SPECS_ALVO" 
-        strokeDasharray="5 5"
-        stroke={colorRed} 
-        fill={colorRed} 
-        isAnimationActive={false} 
-      />
-      <Line 
-        dot={null}
-        type="linear"
-        dataKey="LIMITEC_INICIO" 
-        stroke={colorRed} 
-        fill={colorRed} 
-        isAnimationActive={false} 
-      />
-      <Line 
-        dot={null}
-        type="linear"
-        dataKey="LIMITEC_FINAL" 
-        stroke={colorRed} 
-        fill={colorRed} 
-        isAnimationActive={false} 
-      />
-      <Line 
-        type="linear"
-        dataKey="MEDIA" 
-        stroke={colorBlue} 
-        fill={colorBlue} 
-        isAnimationActive={false} 
-        dot={<CHART_MEDIA_DOT />}
-      />
-    </LineChart>
+    <ResponsiveContainer width="100%" aspect={4}>
+      <LineChart data={CHART_DATA}>
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="DATA" height={50} tick={<CustomizedAxisTick/>} />
+        <YAxis orientation={`right`} domain={DOMINIO} tick={<CustomizedAyisTick />} width={70} />
+        <Tooltip/>
+        <Line 
+          dot={null}
+          type="linear"
+          dataKey="MEDIA_GERAL" 
+          stroke={colorGreen} 
+          fill={colorGreen} 
+          isAnimationActive={false} 
+        />
+        <Line 
+          dot={null}
+          type="linear"
+          dataKey="SPECS_MIN" 
+          strokeDasharray="5 5"
+          stroke={colorRed} 
+          fill={colorRed} 
+          isAnimationActive={false} 
+        />
+        <Line 
+          dot={null}
+          type="linear"
+          dataKey="SPECS_MAX" 
+          strokeDasharray="5 5"
+          stroke={colorRed} 
+          fill={colorRed} 
+          isAnimationActive={false} 
+        />
+        <Line 
+          dot={null}
+          type="linear"
+          dataKey="SPECS_ALVO" 
+          strokeDasharray="5 5"
+          stroke={colorRed} 
+          fill={colorRed} 
+          isAnimationActive={false} 
+        />
+        <Line 
+          dot={null}
+          type="linear"
+          dataKey="LIMITEC_INICIO" 
+          stroke={colorRed} 
+          fill={colorRed} 
+          isAnimationActive={false} 
+        />
+        <Line 
+          dot={null}
+          type="linear"
+          dataKey="LIMITEC_FINAL" 
+          stroke={colorRed} 
+          fill={colorRed} 
+          isAnimationActive={false} 
+        />
+        <Line 
+          type="linear"
+          dataKey="MEDIA" 
+          stroke={colorBlue} 
+          fill={colorBlue} 
+          isAnimationActive={false} 
+          dot={<CHART_MEDIA_DOT />}
+        />
+      </LineChart>
+    </ResponsiveContainer>
   );
 }
 

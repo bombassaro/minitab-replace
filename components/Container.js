@@ -1,4 +1,3 @@
-import './Styles/styles.css'
 const Container = (props) => {
   return (
     <div className='MainContainer'>

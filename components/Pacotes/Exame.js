@@ -44,24 +44,81 @@ const ExameFinal = ({RESULT, SELECTED, HANDLE}) => {
   const {specs, desvios, cpcpk} = RESULTADO
   const {OUTLIERS} = desvios
   const Resultado = () => {
-    const ItemFilmes = () => <li className="FILME" onClick={() => handleChange(RESULTADO.specs.FILME, "FILME")}><BokIcon /> {RESULTADO.specs.FILME}</li>
-    const ItemLinhas = () => <li className="LINHA" onClick={() => handleChange(SELECTED.LINHA[0], "LINHA")}><ComIcon /> {SELECTED.LINHA[0]}</li>
-    const ItemExames = () => <li className="EXAME" onClick={() => handleChange(RESULTADO.specs.EXAME, "EXAME")}><AssIcon /> {RESULTADO.specs.EXAME}</li>
+    const ItemFilmes = () => {
+      return (
+        <li className="FILME">
+          <span className="label">FILME</span>
+           {/* // <BokIcon />  */}
+          <span className="value">{RESULTADO.specs.FILME}</span>
+        </li>
+      )
+    }
+    const ItemLinhas = () => {
+      return (
+        <li className="LINHA">
+          <span className="label">LINHA</span>
+           {/* // <ComIcon />  */}
+          <span className="value">{SELECTED.LINHA[0]}</span>
+        </li>
+      )
+    }
+    const ItemExames = () => {
+      return (
+        <li className="EXAME">
+          <span className="label">EXAME</span>
+           {/* // <AssIcon />  */}
+          <span className="value">{RESULTADO.specs.EXAME}</span>
+        </li>
+      )
+    }
     const Resultado = () => {
       // if(!RESULTADO || !RESULTADO.desvios) return false
       return (
         <>
-          <li>Len: {desvios && desvios.TOTAL_ITEMS}</li>
-          <li>Alv: {specs && specs.ALVO}</li>
-          <li>Min: {specs && specs.MIN}</li>
-          <li>Max: {specs && specs.MAX}</li>
-          <li>Méd: {desvios && desvios.MEDIA_GERAL}</li>
-          <li>&nbsp;DP: {desvios && desvios.DESVIO_PADRAO}</li>
-          <li>&nbsp;DD: {desvios && desvios.DESVIO_DENTRO}</li>
-          <li>&nbsp;PP: {cpcpk && cpcpk.PP}</li>
-          <li>PPK: {cpcpk && cpcpk.PPK}</li>
-          <li>&nbsp;CP: {cpcpk && cpcpk.CP}</li>
-          <li>CPK: {cpcpk && cpcpk.CPK}</li>
+          <li>
+            <span className="label">Len</span>
+            <span className="value">{desvios && desvios.TOTAL_ITEMS}</span>
+          </li>
+          <li>
+            <span className="label">Alv</span>
+            <span className="value">{specs.ALVO ? specs.ALVO : `N/D`}</span>
+          </li>
+          <li>
+            <span className="label">Min</span>
+            <span className="value">{specs.MIN ? specs.MIN : `N/D`}</span>
+          </li>
+          <li>
+            <span className="label">Max</span>
+            <span className="value">{specs.MAX ? specs.MAX : `N/D`}</span>
+          </li>
+          <li>
+            <span className="label">Méd</span>
+            <span className="value">{desvios.MEDIA_GERAL ? desvios.MEDIA_GERAL.toFixed(4) : `N/D`}</span>
+          </li>
+          <li>
+            <span className="label">DP</span>
+            <span className="value">{desvios.DESVIO_PADRAO ? desvios.DESVIO_PADRAO.toFixed(4) : `N/D`}</span>
+          </li>
+          <li>
+            <span className="label">DD</span>
+            <span className="value">{desvios.DESVIO_DENTRO ? desvios.DESVIO_DENTRO.toFixed(4) : `N/D`}</span>
+          </li>
+          <li>
+            <span className="label">PP</span>
+            <span className="value">{cpcpk.PP ? cpcpk.PP.toFixed(4) : `N/D`}</span>
+          </li>
+          <li>
+            <span className="label">PPK</span>
+            <span className="value">{cpcpk.PPK ? cpcpk.PPK.toFixed(4) : `N/D`}</span>
+          </li>
+          <li>
+            <span className="label">CP</span>
+            <span className="value">{cpcpk.CP ? cpcpk.CP.toFixed(4) : `N/D`}</span>
+          </li>
+          <li>
+            <span className="label">CPK</span>
+            <span className="value">{cpcpk.CPK ? cpcpk.CPK.toFixed(4) : `N/D`}</span>
+          </li>
         </>
       )
     }
@@ -81,9 +138,9 @@ const ExameFinal = ({RESULT, SELECTED, HANDLE}) => {
     let isOutlier = filter(OUTLIERS, {_id: ITEM._id}).length
     // console.log(OUTLIERS.length, {_id: ITEM._id}, isOutlier.length)
     return (
-      <div className={`line ${isOutlier ? `red` : ``}`}>
-        <li>{ITEM.EXAME}</li>
+      <div className={`line item ${isOutlier ? `red` : ``}`}>
         <li>{ITEM.LINHA}</li>
+        <li>{ITEM.EXAME}</li>
         <li>{ITEM.FILME}</li>
         <li>{ITEM.MIN}</li>
         <li>{ITEM.MAX}</li>
@@ -105,9 +162,7 @@ const ExameFinal = ({RESULT, SELECTED, HANDLE}) => {
       <div className='GroupExameFinal'>
         <h3>{RESULTADO.specs.EXAME} <span onClick={() => setShowTable(!showTable)}>{showTable ? `esconder tabela` : `ver tabela`}</span></h3>
         <div className='Card'>
-          <div>
-            <Resultado />
-          </div>
+          <Resultado />
           <div className='ChartDivisor'>
             <Chart CONTENT={CONTENT} RESUME={RESULTADO} />
           </div>
@@ -116,8 +171,8 @@ const ExameFinal = ({RESULT, SELECTED, HANDLE}) => {
           <div className='TableCpto TableExame'>
             <div className='scrollable'>
               <div className='line header'>
-                <li>EXAME</li>
                 <li>LINHA</li>
+                <li>EXAME</li>
                 <li>FILME</li>
                 <li>MIN</li>
                 <li>MAX</li>

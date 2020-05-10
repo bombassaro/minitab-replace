@@ -13,7 +13,7 @@ export default class MyApp extends App {
         <Head>
           <meta charSet='utf-8'/>
           <meta httpEquiv='x-ua-compatible' content='ie=edge'/>
-          <meta name='description' content='SEIS SIGMA'/>
+          <meta name='description' content='Sys Sigma'/>
           <meta name='theme-color' content='#317EFB'/>
           {/* <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'/> */}
           <link rel='apple-touch-icon' href='/static/images/icons-192.png'/>
@@ -21,7 +21,7 @@ export default class MyApp extends App {
           <link rel='manifest' href='/static/manifest.json'/>
           <link rel='shortcut icon' href='/static/images/favicon.ico'/>
           <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
-          <title>SEIS SIGMA</title>
+          <title>Sys Sigma</title>
         </Head>
         <Component {...this.props} />
       </React.Fragment>

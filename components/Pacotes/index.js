@@ -70,7 +70,7 @@ export default () => {
         <div className={`Wrap`}>
           <div className={`leftButton`}>
             <i className={`material-icons`}>timeline</i>
-            <p className={`title`} onClick={() => location.reload()}>SEIS SIGMA</p>
+            <a className={`title`} href={`/`}>SYS SIGMA</a>
           </div>
           <div></div>
           <div className={`rightWrap`}>

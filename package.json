@@ -7,11 +7,13 @@
     "dev": "npm run local",
     "local": "next build && npm run pm2-start-local && npm run pm2-logs",
     "pm2-start-local": "pm2 start env.json --env local",
-    "pm2-logs": "pm2 flush && pm2 logs minitab"
+    "pm2-logs": "pm2 flush && pm2 logs minitab",
+    "up-ds": "yarn add ../xprog/design-system && npm run build && pm2 restart minitab"
   },
   "dependencies": {
-    "@babel/runtime": "^7.6.3",
+    "@babel/runtime": "^7.9.6",
     "axios": "^0.19.2",
+    "babel-loader": "^8.1.0",
     "classnames": "^2.2.6",
     "compression": "^1.7.4",
     "concurrently": "^4.1.2",

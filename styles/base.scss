@@ -19,25 +19,14 @@ body {
     @include w(100%);
   }
 }
-
 .panel-body {
   &.dialog {
     @include mw(300px);
   }
 }
-
-// * {
-// 	@include m(0px);
-// 	@include p(0px);
-// 	@include fs(14px);
-// }
-// html, body {
-// 	@include area(100%);
-// 	@include ff($font-primary);
-// }
-// a {
-//   text-decoration: none;
-// }
+a {
+  text-decoration: none;
+}
 select {
 	@include p(5px);
 	@include w(100%);
@@ -103,7 +92,7 @@ i.material-icons {
 		@include fx(center, center);
 		@include jc(space-between);
 		@include h(100%);
-		@include mw(920px);
+		@include mw(1280px);
 		@include w(100%);
 		& > div {
 			@include fy(center, flex-start);
@@ -195,7 +184,6 @@ i.material-icons {
 		@include fx(flex-start, flex-start);
 		@include jc(space-between);
 		@include h(50vh);
-		@include mt(120px);
 		@include mw(920px);
 		@include w(100%);
 	}

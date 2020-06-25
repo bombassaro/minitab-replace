@@ -3,7 +3,10 @@ const csv = require('csv-parser')
 const getTime = require('date-fns/getTime')
 const {map} = require('lodash')
 const fs = require('fs')
-const domain = process.env.MIDDLEWR_URL
+
+const configEnv = require('../../configenv.js')
+const domain = configEnv.MIDDLEWR_URL
+
 const headers = {'Accept': 'application/json', 'Content-Type': 'application/json'}
 const {exameNrmlzr, filmeNrmlzr, linhaNrmlzr} = require('../normalizador/actions')
 

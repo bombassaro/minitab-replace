@@ -5,6 +5,7 @@
   "scripts": {
     "build": "next build",
     "dev": "npm run local",
+    "start": "node server",
     "local": "next build && npm run pm2-start-local && npm run pm2-logs",
     "pm2-start-local": "pm2 start env.json --env local",
     "pm2-logs": "pm2 flush && pm2 logs minitab",
@@ -43,6 +44,6 @@
     "request-promise": "^4.2.5",
     "sass": "^1.26.3",
     "strip-bom-stream": "^4.0.0",
-    "xprog-ds": "../xprog/design-system"
+    "xprog-ds": "../xprog-ds"
   }
 }

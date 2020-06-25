@@ -2,7 +2,8 @@ const request = require('request-promise')
 const {map} = require('lodash')
 const headers = {'Accept': 'application/json', 'Content-Type': 'application/json'}
 
-const domain = process.env.MIDDLEWR_URL
+const configEnv = require('../../configenv.js')
+const domain = configEnv.MIDDLEWR_URL
 const uri = `${domain}/exame/create`
 
 const array_chunks = (array, chunk_size) => Array(Math.ceil(array.length / chunk_size)).fill().map((_, index) => index * chunk_size).map(begin => array.slice(begin, begin + chunk_size))

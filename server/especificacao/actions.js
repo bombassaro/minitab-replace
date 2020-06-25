@@ -3,10 +3,11 @@ const csv = require('csv-parser')
 const {map} = require('lodash')
 const request = require('request-promise')
 const Model = require('./model')
-const domain = process.env.MIDDLEWR_URL
 const headers = {'Accept': 'application/json', 'Content-Type': 'application/json'}
 const {exameNrmlzr} = require('../normalizador/actions')
 
+const configEnv = require('../../configenv.js')
+const domain = configEnv.MIDDLEWR_URL
 
 const parseFile = (path) => {
   return new Promise((resolve,reject)=> {

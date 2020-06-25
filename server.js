@@ -8,13 +8,10 @@ const exame = require('./server/exame/routes')
 const pacote = require('./server/pacote/routes')
 const especificacao = require('./server/especificacao/routes')
 
-const dev = process.env.NODE_ENV !== 'production'
-const port = process.env.PORT
-const nextApp = next({ dev })
-const nextHandler = nextApp.getRequestHandler()
+const configEnv = require('./configenv.js')
 
 // mongo connection
-mongoose.connect(`${process.env.MONGO_NAME}`, {
+mongoose.connect(`${configEnv.MONGO_NAME}`, {
 	useNewUrlParser: true, 
 	useCreateIndex: true, 
 	useUnifiedTopology: true,

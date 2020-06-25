@@ -10,6 +10,11 @@ const especificacao = require('./server/especificacao/routes')
 
 const configEnv = require('./configenv.js')
 
+const dev = process.env.NODE_ENV !== 'production'
+const port = configEnv.PORT
+const nextApp = next({ dev })
+const nextHandler = nextApp.getRequestHandler()
+
 // mongo connection
 mongoose.connect(`${configEnv.MONGO_NAME}`, {
 	useNewUrlParser: true, 

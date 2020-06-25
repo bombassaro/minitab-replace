@@ -1,5 +1,6 @@
-import {MIDDLEWR_URL} from '../front.confg'
 import {doFetch} from './fetch'
+import configEnv from '../configenv.js'
+const {MIDDLEWR_URL} = configEnv
 const loadPacotes = async (callback) => {
   const method = `POST`
   const body = {
